@@ -4,4 +4,4 @@ Flask-Admin==1.6.1
 Flask-Migrate==4.0.4
 markdown==3.4.3
 gunicorn==21.2.0
-psycopg[binary]
+psycopg2-binary==2.9.9
