@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <!-- Hero 区域 -->
+    <div class="row align-items-center min-vh-75 py-5">
+        <div class="col-lg-7">
+            <h1 class="display-1 fw-bold mb-3" style="background: linear-gradient(135deg, #0b1120 0%, #d4af37 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                UBCC 2026
+            </h1>
+            <p class="fs-1 fw-light text-muted mb-2">Orientation Camp</p>
+            <p class="lead text-secondary mb-4" style="max-width: 500px;">
+                University Business Consulting Club
+            </p>
+            <p class="text-secondary mb-4" style="max-width: 500px; font-size: 1.1rem;">
+                本网站提供 OCAMP 每日活动的详细资讯，包括活动指南、所需资料、Case 要求等等。
+            </p>
+            <a href="{{ url_for('main.camp') }}" class="btn btn-gold btn-lg">
+                <i class="fas fa-arrow-right me-2"></i>查看日程表
+            </a>
+        </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+            <div class="display-1 text-gold" style="font-size: 8rem; color: #d4af37;">
+                <i class="fas fa-building-columns"></i>
+            </div>
+            <p class="text-muted small mt-3">Consulting · Leadership · Excellence</p>
+        </div>
+    </div>
+
+    <!-- 快速入口卡片 -->
+    <div class="row g-4 mt-4">
+        <div class="col-md-4">
+            <div class="card card-hover h-100 p-3 text-center bg-white">
+                <div class="card-body">
+                    <i class="fas fa-users fa-2x gold-text mb-3"></i>
+                    <h5 class="card-title">结识伙伴</h5>
+                    <p class="card-text text-secondary small">与来自各专业的精英共同成长</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-hover h-100 p-3 text-center bg-white">
+                <div class="card-body">
+                    <i class="fas fa-briefcase fa-2x gold-text mb-3"></i>
+                    <h5 class="card-title">实战 Case</h5>
+                    <p class="card-text text-secondary small">沉浸式商业案例分析训练</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-hover h-100 p-3 text-center bg-white">
+                <div class="card-body">
+                    <i class="fas fa-city fa-2x gold-text mb-3"></i>
+                    <h5 class="card-title">探索香港</h5>
+                    <p class="card-text text-secondary small">从校园到城市，全方位体验</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .min-vh-75 {
+        min-height: 70vh;
+    }
+    .text-gold {
+        color: #d4af37;
+    }
+    .card-hover {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+    .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+</style>
+
+{% endblock %}

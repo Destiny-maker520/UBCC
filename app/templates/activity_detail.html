@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('main.camp') }}">日程表</a></li>
+        <li class="breadcrumb-item active">{{ act.day }}</li>
+    </ol>
+</nav>
+
+<div class="card">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">{{ act.title }}</h3>
+    </div>
+    <div class="card-body">
+        <p><strong>日期：</strong>{{ act.day }}</p>
+        <p><strong>时段：</strong>{{ act.period }}（{{ act.time }}）</p>
+        <hr>
+
+        {% if act.guide_html %}
+        <div class="mb-3">
+            <h5>📋 活动指南</h5>
+            <div class="border rounded p-3 bg-light">{{ act.guide_html|safe }}</div>
+        </div>
+        {% endif %}
+
+        {% if act.materials_html %}
+        <div class="mb-3">
+            <h5> 所需资料</h5>
+            <div class="border rounded p-3 bg-light">{{ act.materials_html|safe }}</div>
+        </div>
+        {% endif %}
+
+        {% if act.rules_html %}
+        <div class="mb-3">
+            <h5>📝 case规则</h5>
+            <div class="border rounded p-3 bg-light">{{ act.rules_html|safe }}</div>
+        </div>
+        {% endif %}
+
+        {% if act.extra_notes_html %}
+        <div class="mb-3">
+            <h5> 补充说明</h5>
+            <div class="border rounded p-3 bg-light">{{ act.extra_notes_html|safe }}</div>
+        </div>
+        {% endif %}
+
+        <a href="{{ url_for('main.camp') }}" class="btn btn-outline-primary">← 返回日程表</a>
+    </div>
+</div>
+{% endblock %}
