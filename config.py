@@ -14,3 +14,6 @@ class Config:
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = os.environ.get('SECRET_KEY', 'UBCC-2026-OCAMP')
+
+    BASIC_AUTH_USERNAME = 'admin'  # 登录用户名
+    BASIC_AUTH_PASSWORD = 'ubcc2026hui'  # 登录密码
