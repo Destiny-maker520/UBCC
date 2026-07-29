@@ -2,8 +2,8 @@
 {% block content %}
 
 <div class="container">
-    <!-- Hero 区域 -->
-    <div class="row align-items-center py-5">
+    <!-- Hero 区域：左侧文字 + 右侧图片 -->
+    <div class="row align-items-center py-5 min-vh-75">
         <div class="col-lg-7">
             <h1 class="display-2 fw-bold" style="color: var(--ubcc-dark);">
                 UBCC <span class="text-ubcc">2026</span>
@@ -20,15 +20,32 @@
             </a>
         </div>
         <div class="col-lg-5 text-center d-none d-lg-block">
-            <div class="display-1" style="color: var(--ubcc-orange); font-size: 7rem;">
-                <i class="fas fa-building-columns"></i>
-            </div>
-            <p class="text-muted small mt-3">Consulting · Leadership · Excellence</p>
+            <!-- 这里放图片，替代之前的纯图标 -->
+            <img src="{{ url_for('static', filename='images/UBCC.png') }}"
+                 alt="UBCC Logo"
+                 class="img-fluid"
+                 style="max-height: 280px; object-fit: contain; filter: drop-shadow(0 8px 30px rgba(245,166,35,0.25));">
         </div>
     </div>
 
-    <!-- 三个功能卡片（类似Trading Club） -->
-    <div class="row g-4 mt-4">
+    <!-- “Consulting · Leadership · Excellence” 加强版 -->
+    <div class="text-center my-4 py-3">
+        <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+            <span class="fw-bold text-uppercase" style="font-size: 1.4rem; letter-spacing: 2px; color: var(--ubcc-dark); border-right: 3px solid var(--ubcc-orange); padding-right: 24px;">
+                <i class="fas fa-briefcase text-ubcc me-2"></i>Consulting
+            </span>
+            <span class="fw-bold text-uppercase" style="font-size: 1.4rem; letter-spacing: 2px; color: var(--ubcc-dark); border-right: 3px solid var(--ubcc-orange); padding-right: 24px;">
+                <i class="fas fa-flag text-ubcc me-2"></i>Leadership
+            </span>
+            <span class="fw-bold text-uppercase" style="font-size: 1.4rem; letter-spacing: 2px; color: var(--ubcc-dark);">
+                <i class="fas fa-star text-ubcc me-2"></i>Excellence
+            </span>
+        </div>
+        <p class="text-muted small mt-2" style="letter-spacing: 4px;">—— 2026 Orientation Camp ——</p>
+    </div>
+
+    <!-- 三个功能卡片 -->
+    <div class="row g-4 mt-2">
         <div class="col-md-4">
             <div class="card card-ubcc p-4 text-center">
                 <div class="card-body">
@@ -67,7 +84,7 @@
         </div>
     </div>
 
-    <!-- 可选的“关于我们”锚点 -->
+    <!-- 关于我们锚点 -->
     <div id="about" class="mt-5 pt-5">
         <hr class="border-2" style="border-color: var(--ubcc-orange); opacity: 0.3;">
         <div class="row g-4 align-items-center">
