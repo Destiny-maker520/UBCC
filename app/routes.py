@@ -26,3 +26,7 @@ def activity_detail(id):
     act.rules_html = markdown.markdown(act.rules) if act.rules else ''
     act.extra_notes_html = markdown.markdown(act.extra_notes) if act.extra_notes else ''
     return render_template('activity_detail.html', act=act)
+
+@bp.route('/about')
+def about():
+    return render_template('about.html')
