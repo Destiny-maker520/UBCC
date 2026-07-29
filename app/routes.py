@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, redirect, url_for, session
 from .models import Activity
 import markdown
 
@@ -30,3 +30,17 @@ def activity_detail(id):
 @bp.route('/about')
 def about():
     return render_template('about.html')
+
+@bp.route('/admin/login', methods=['GET', 'POST'])
+def admin_login():
+    error = None
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        # 这里和 config.py 里的密码保持一致
+        if username == 'admin' and password == 'ubcc2026hui':
+            session['admin_logged_in'] = True
+            return redirect(url_for('admin.index'))
+        else:
+            error = '用户名或密码错误，请重试。'
+    return render_template('admin/login.html', error=error)
