@@ -3,79 +3,89 @@
 
 <div class="container">
     <!-- Hero 区域 -->
-    <div class="row align-items-center min-vh-75 py-5">
+    <div class="row align-items-center py-5">
         <div class="col-lg-7">
-            <h1 class="display-1 fw-bold mb-3" style="background: linear-gradient(135deg, #0b1120 0%, #d4af37 80%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
-                UBCC 2026
+            <h1 class="display-2 fw-bold" style="color: var(--ubcc-dark);">
+                UBCC <span class="text-ubcc">2026</span>
+                <br><span style="font-size: 0.6em; font-weight: 400;">Orientation Camp</span>
             </h1>
-            <p class="fs-1 fw-light text-muted mb-2">Orientation Camp</p>
-            <p class="lead text-secondary mb-4" style="max-width: 500px;">
-                University Business Consulting Club
+            <p class="lead text-secondary mt-3" style="max-width: 550px;">
+                香港大学商业咨询协会 · 年度迎新营
             </p>
-            <p class="text-secondary mb-4" style="max-width: 500px; font-size: 1.1rem;">
-                本网站提供 OCAMP 每日活动的详细资讯，包括活动指南、所需资料、Case 要求等等。
+            <p class="text-secondary" style="max-width: 500px;">
+                本网站提供迎新营每日活动的详细资讯，包括活动指南、所需资料、Case 要求等等。
             </p>
-            <a href="{{ url_for('main.camp') }}" class="btn btn-gold btn-lg">
+            <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc btn-lg mt-2">
                 <i class="fas fa-arrow-right me-2"></i>查看日程表
             </a>
         </div>
         <div class="col-lg-5 text-center d-none d-lg-block">
-            <div class="display-1 text-gold" style="font-size: 8rem; color: #d4af37;">
+            <div class="display-1" style="color: var(--ubcc-orange); font-size: 7rem;">
                 <i class="fas fa-building-columns"></i>
             </div>
             <p class="text-muted small mt-3">Consulting · Leadership · Excellence</p>
         </div>
     </div>
 
-    <!-- 快速入口卡片 -->
+    <!-- 三个功能卡片（类似Trading Club） -->
     <div class="row g-4 mt-4">
         <div class="col-md-4">
-            <div class="card card-hover h-100 p-3 text-center bg-white">
+            <div class="card card-ubcc p-4 text-center">
                 <div class="card-body">
-                    <i class="fas fa-users fa-2x gold-text mb-3"></i>
-                    <h5 class="card-title">结识伙伴</h5>
-                    <p class="card-text text-secondary small">与来自各专业的精英共同成长</p>
+                    <div class="card-icon"><i class="fas fa-calendar-plus"></i></div>
+                    <h5 class="card-title fw-bold">Join Our Upcoming Events</h5>
+                    <p class="card-text text-secondary small">
+                        报名参与即将举行的活动，与会员共同成长。
+                    </p>
+                    <a href="#" class="btn btn-ubcc">了解更多 <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card card-hover h-100 p-3 text-center bg-white">
+            <div class="card card-ubcc p-4 text-center">
                 <div class="card-body">
-                    <i class="fas fa-briefcase fa-2x gold-text mb-3"></i>
-                    <h5 class="card-title">实战 Case</h5>
-                    <p class="card-text text-secondary small">沉浸式商业案例分析训练</p>
+                    <div class="card-icon"><i class="fas fa-archive"></i></div>
+                    <h5 class="card-title fw-bold">Look Through Previous Events</h5>
+                    <p class="card-text text-secondary small">
+                        回顾过往活动，查看我们的成就与历程。
+                    </p>
+                    <a href="#" class="btn btn-ubcc">浏览 <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card card-hover h-100 p-3 text-center bg-white">
+            <div class="card card-ubcc p-4 text-center">
                 <div class="card-body">
-                    <i class="fas fa-city fa-2x gold-text mb-3"></i>
-                    <h5 class="card-title">探索香港</h5>
-                    <p class="card-text text-secondary small">从校园到城市，全方位体验</p>
+                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                    <h5 class="card-title fw-bold">Host an Event with Us</h5>
+                    <p class="card-text text-secondary small">
+                        合作举办活动、推广或赞助，请联系我们。
+                    </p>
+                    <a href="#contact" class="btn btn-ubcc">联系我们 <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<style>
-    .min-vh-75 {
-        min-height: 70vh;
-    }
-    .text-gold {
-        color: #d4af37;
-    }
-    .card-hover {
-        transition: all 0.3s ease;
-        border: none;
-        border-radius: 16px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    }
-    .card-hover:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-    }
-</style>
+    <!-- 可选的“关于我们”锚点 -->
+    <div id="about" class="mt-5 pt-5">
+        <hr class="border-2" style="border-color: var(--ubcc-orange); opacity: 0.3;">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6">
+                <h2 class="fw-bold" style="color: var(--ubcc-dark);">关于 <span class="text-ubcc">UBCC</span></h2>
+                <p class="text-secondary">
+                    香港大学商业咨询协会（UBCC）致力于为学生提供商业咨询实践平台，
+                    通过案例训练、行业交流、企业合作，培养未来的商业领袖。
+                </p>
+                <p class="text-secondary small">
+                    成立至今，我们已举办多场商业案例分析大赛，并与多家名企建立合作关系。
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <i class="fas fa-users fa-5x text-ubcc opacity-50"></i>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
