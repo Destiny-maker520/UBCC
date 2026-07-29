@@ -194,7 +194,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <!-- 关于我们 (无下拉) -->
+                <!-- 关于我们 (下拉) -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('main.about') }}"><i class="fas fa-info-circle me-1"></i>关于我们</a>
                 </li>
@@ -244,11 +244,20 @@
                     <a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i>联系</a>
                 </li>
 
-                <!-- 可选：日程表快捷按钮（突出） -->
+                <!-- 日程表快捷按钮（突出） -->
                 <li class="nav-item">
                     <a class="btn btn-ubcc-outline ms-2" href="{{ url_for('main.camp') }}" style="color:#fff; border-color:var(--ubcc-orange);">
                         <i class="fas fa-arrow-right"></i> 日程表
                     </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLang" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-globe me-1"></i>语言
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#" onclick="switchLanguage('zh')">🇨🇳 中文</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="switchLanguage('en')">🇬🇧 English</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>

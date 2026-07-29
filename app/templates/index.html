@@ -2,42 +2,41 @@
 {% block content %}
 
 <div class="container">
-    <!-- Hero 区域：左侧文字 + 右侧图片 -->
-    <div class="row align-items-center py-5 min-vh-75">
-        <div class="col-lg-7">
+    <!-- Hero 区域：左右更紧凑，图片更大 -->
+    <div class="row align-items-center py-4">
+        <div class="col-lg-6 pe-lg-3">
             <h1 class="display-2 fw-bold" style="color: var(--ubcc-dark);">
                 UBCC <span class="text-ubcc">2026</span>
-                <br><span style="font-size: 0.6em; font-weight: 400;">Orientation Camp</span>
+                <br><span style="font-size: 0.55em; font-weight: 400;">Orientation Camp</span>
             </h1>
-            <p class="lead text-secondary mt-3" style="max-width: 550px;">
+            <p class="lead text-secondary mt-3" style="max-width: 500px;">
                 香港大学商业咨询协会 · 年度迎新营
             </p>
-            <p class="text-secondary" style="max-width: 500px;">
+            <p class="text-secondary" style="max-width: 480px;">
                 本网站提供迎新营每日活动的详细资讯，包括活动指南、所需资料、Case 要求等等。
             </p>
             <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc btn-lg mt-2">
                 <i class="fas fa-arrow-right me-2"></i>查看日程表
             </a>
         </div>
-        <div class="col-lg-5 text-center d-none d-lg-block">
-            <!-- 这里放图片，替代之前的纯图标 -->
+        <div class="col-lg-6 text-center ps-lg-3">
             <img src="{{ url_for('static', filename='images/UBCC.png') }}"
                  alt="UBCC Logo"
                  class="img-fluid"
-                 style="max-height: 280px; object-fit: contain; filter: drop-shadow(0 8px 30px rgba(245,166,35,0.25));">
+                 style="max-height: 380px; width: 100%; object-fit: contain; filter: drop-shadow(0 8px 30px rgba(245,166,35,0.3));">
         </div>
     </div>
 
-    <!-- “Consulting · Leadership · Excellence” 加强版 -->
-    <div class="text-center my-4 py-3">
+    <!-- Consulting · Leadership · Excellence -->
+    <div class="text-center my-3 py-3">
         <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
-            <span class="fw-bold text-uppercase" style="font-size: 1.4rem; letter-spacing: 2px; color: var(--ubcc-dark); border-right: 3px solid var(--ubcc-orange); padding-right: 24px;">
+            <span class="fw-bold text-uppercase" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--ubcc-dark); border-right: 3px solid var(--ubcc-orange); padding-right: 28px;">
                 <i class="fas fa-briefcase text-ubcc me-2"></i>Consulting
             </span>
-            <span class="fw-bold text-uppercase" style="font-size: 1.4rem; letter-spacing: 2px; color: var(--ubcc-dark); border-right: 3px solid var(--ubcc-orange); padding-right: 24px;">
+            <span class="fw-bold text-uppercase" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--ubcc-dark); border-right: 3px solid var(--ubcc-orange); padding-right: 28px;">
                 <i class="fas fa-flag text-ubcc me-2"></i>Leadership
             </span>
-            <span class="fw-bold text-uppercase" style="font-size: 1.4rem; letter-spacing: 2px; color: var(--ubcc-dark);">
+            <span class="fw-bold text-uppercase" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--ubcc-dark);">
                 <i class="fas fa-star text-ubcc me-2"></i>Excellence
             </span>
         </div>
@@ -84,8 +83,8 @@
         </div>
     </div>
 
-    <!-- 关于我们锚点 -->
-    <div id="about" class="mt-5 pt-5">
+    <!-- 关于我们锚点（保留简短介绍） -->
+    <div id="about" class="mt-5 pt-4">
         <hr class="border-2" style="border-color: var(--ubcc-orange); opacity: 0.3;">
         <div class="row g-4 align-items-center">
             <div class="col-md-6">
@@ -94,9 +93,9 @@
                     香港大学商业咨询协会（UBCC）致力于为学生提供商业咨询实践平台，
                     通过案例训练、行业交流、企业合作，培养未来的商业领袖。
                 </p>
-                <p class="text-secondary small">
-                    成立至今，我们已举办多场商业案例分析大赛，并与多家名企建立合作关系。
-                </p>
+                <a href="{{ url_for('main.about') }}" class="btn btn-outline-ubcc mt-2">
+                    了解更多 <i class="fas fa-arrow-right ms-1"></i>
+                </a>
             </div>
             <div class="col-md-6 text-center">
                 <i class="fas fa-users fa-5x text-ubcc opacity-50"></i>

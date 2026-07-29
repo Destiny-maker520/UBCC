@@ -2,72 +2,76 @@
 {% block content %}
 
 <div class="container py-5">
-    <!-- 页面标题 -->
+    <!-- 页面标题 + 语言切换按钮 -->
     <div class="text-center mb-5">
         <h1 class="display-4 fw-bold" style="color: var(--ubcc-dark);">
             <span class="text-ubcc">About</span> Us
         </h1>
-        <div class="d-flex justify-content-center gap-3 mt-2">
-            <span class="badge bg-ubcc-light text-ubcc px-3 py-2">中文</span>
-            <span class="badge bg-ubcc-light text-ubcc px-3 py-2">English</span>
+        <div class="d-flex justify-content-center gap-3 mt-3">
+            <button class="btn btn-outline-ubcc px-4" id="lang-zh" onclick="switchLanguage('zh')" style="border: 2px solid var(--ubcc-orange); border-radius: 50px; font-weight: 600; color: var(--ubcc-orange); background: transparent;">
+                中文
+            </button>
+            <button class="btn btn-ubcc px-4" id="lang-en" onclick="switchLanguage('en')" style="border-radius: 50px; font-weight: 600;">
+                English
+            </button>
         </div>
         <hr class="w-25 mx-auto" style="border-color: var(--ubcc-orange); opacity: 0.5;">
     </div>
 
-    <!-- ===== 中文部分 ===== -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2 class="fw-bold" style="color: var(--ubcc-dark);">
-                <i class="fas fa-flag text-ubcc me-2"></i>关于我们
-            </h2>
-            <div class="card card-ubcc p-4 mt-3">
-                <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
-                    香港大学商业咨询协会（UBCC）成立于 2009 年，是在香港政府注册的非营利性组织。自成立以来，UBCC 始终铭记创始人洪先生（David Hong，现任摩根大通联席副总裁）所强调的宗旨：<strong>“做可靠的事，成为可靠的人”</strong>。
-                </p>
+    <!-- ===== 中文内容 ===== -->
+    <div id="content-zh" class="language-content">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold" style="color: var(--ubcc-dark);">
+                    <i class="fas fa-flag text-ubcc me-2"></i>关于我们
+                </h2>
+                <div class="card card-ubcc p-4 mt-3">
+                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                        香港大学商业咨询协会（UBCC）成立于2009年，是在香港政府注册的非营利性组织。自成立以来，UBCC 始终铭记创始人洪先生（David Hong，现任摩根大通联席副总裁）所强调的宗旨：<strong>“做可靠的事，成为可靠的人”</strong>。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold" style="color: var(--ubcc-dark);">
+                    <i class="fas fa-bullseye text-ubcc me-2"></i>我们的目标
+                </h2>
+                <div class="card card-ubcc p-4 mt-3">
+                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                        我们一直致力于为学生提供<strong>实践专业知识</strong>和<strong>拓展商业视野</strong>的平台。UBCC 为会员提供宏观经济、企业战略、金融市场等方面的专业培训，以及深入的分析和研究，<strong>与时俱进</strong>，帮助会员建立和巩固坚实的比较优势。
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== 我们的目标（中文） ===== -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2 class="fw-bold" style="color: var(--ubcc-dark);">
-                <i class="fas fa-bullseye text-ubcc me-2"></i>我们的目标
-            </h2>
-            <div class="card card-ubcc p-4 mt-3">
-                <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
-                    我们一直致力于为学生提供<strong>实践专业知识</strong>和<strong>拓展商业视野</strong>的平台。UBCC 为会员提供宏观经济、企业战略、金融市场等方面的专业培训，以及深入的分析和研究，<strong>与时俱进</strong>，帮助会员建立和巩固坚实的比较优势。
-                </p>
+    <!-- ===== 英文内容 ===== -->
+    <div id="content-en" class="language-content" style="display: none;">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold" style="color: var(--ubcc-dark);">
+                    <i class="fas fa-flag text-ubcc me-2"></i>About Us
+                </h2>
+                <div class="card card-ubcc p-4 mt-3">
+                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                        Founded in 2009, the <strong>University Business Consulting Club (UBCC)</strong> is a non-profit organization registered with the Hong Kong Government. Since its establishment, UBCC has always kept in mind the principle of <strong>"Doing reliable things, becoming reliable people"</strong> (as emphasized by the founder Mr. David Hong, current JPMorgan Chase Co Vice President).
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <hr class="my-5" style="border-color: var(--ubcc-orange); opacity: 0.2;">
-
-    <!-- ===== English Section ===== -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2 class="fw-bold" style="color: var(--ubcc-dark);">
-                <i class="fas fa-flag text-ubcc me-2"></i>About Us
-            </h2>
-            <div class="card card-ubcc p-4 mt-3">
-                <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
-                    Founded in 2009, the <strong>University Business Consulting Club (UBCC)</strong> is a non-profit organization registered with the Hong Kong Government. Since its establishment, UBCC has always kept in mind the principle of <strong>"Doing reliable things, becoming reliable people"</strong> (as emphasized by the founder Mr. David Hong, current JPMorgan Chase Co Vice President).
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== Our Aim（English） ===== -->
-    <div class="row mb-5">
-        <div class="col-12">
-            <h2 class="fw-bold" style="color: var(--ubcc-dark);">
-                <i class="fas fa-bullseye text-ubcc me-2"></i>Our Aim
-            </h2>
-            <div class="card card-ubcc p-4 mt-3">
-                <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
-                    We have always been committed to providing a platform for students to <strong>practice professional knowledge</strong> and <strong>expand business vision</strong>. UBCC offers our members specialized <strong>training</strong> in macroeconomics, corporate strategies and financial markets, in-depth analysis and research, <strong>keeping pace with the development of the times</strong>, as well as establishing and cultivating a solid comparative advantage.
-                </p>
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="fw-bold" style="color: var(--ubcc-dark);">
+                    <i class="fas fa-bullseye text-ubcc me-2"></i>Our Aim
+                </h2>
+                <div class="card card-ubcc p-4 mt-3">
+                    <p class="text-secondary" style="font-size: 1.1rem; line-height: 1.8;">
+                        We have always been committed to providing a platform for students to <strong>practice professional knowledge</strong> and <strong>expand business vision</strong>. UBCC offers our members specialized <strong>training</strong> in macroeconomics, corporate strategies and financial markets, in-depth analysis and research, <strong>keeping pace with the development of the times</strong>, as well as establishing and cultivating a solid comparative advantage.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -75,9 +79,48 @@
     <!-- 返回首页 -->
     <div class="text-center mt-4">
         <a href="{{ url_for('main.index') }}" class="btn btn-ubcc">
-            <i class="fas fa-arrow-left me-2"></i>返回首页
+            <i class="fas fa-arrow-left me-2"></i>返回首页 / Back to Home
         </a>
     </div>
 </div>
+
+<!-- ===== JavaScript 切换逻辑 ===== -->
+<script>
+    function switchLanguage(lang) {
+        // 隐藏所有内容
+        document.querySelectorAll('.language-content').forEach(el => {
+            el.style.display = 'none';
+        });
+
+        // 显示选中的语言
+        if (lang === 'zh') {
+            document.getElementById('content-zh').style.display = 'block';
+            document.getElementById('lang-zh').className = 'btn btn-ubcc px-4';
+            document.getElementById('lang-en').className = 'btn btn-outline-ubcc px-4';
+        } else {
+            document.getElementById('content-en').style.display = 'block';
+            document.getElementById('lang-en').className = 'btn btn-ubcc px-4';
+            document.getElementById('lang-zh').className = 'btn btn-outline-ubcc px-4';
+        }
+    }
+
+    // 默认显示中文
+    document.addEventListener('DOMContentLoaded', function() {
+        switchLanguage('zh');
+    });
+</script>
+
+<style>
+    .btn-outline-ubcc {
+        border: 2px solid var(--ubcc-orange);
+        background: transparent;
+        color: var(--ubcc-orange);
+        transition: 0.3s;
+    }
+    .btn-outline-ubcc:hover {
+        background: var(--ubcc-orange);
+        color: #fff;
+    }
+</style>
 
 {% endblock %}
