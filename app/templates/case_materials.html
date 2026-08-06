@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+    <!-- 页面标题 -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold" style="color: var(--ubcc-dark);">
+            <span class="text-ubcc">Case</span> 资料库
+        </h1>
+        <p class="text-secondary" style="max-width: 600px; margin: 0 auto;">
+            香港茶饮市场 · 品牌战略分析方向参考卡<br>
+            Hong Kong Tea Market · Brand Strategy Implementation Reference Cards
+        </p>
+        <hr class="w-25 mx-auto" style="border-color: var(--ubcc-orange); opacity: 0.4;">
+        <p class="text-muted small mt-2">
+            <i class="fas fa-info-circle me-1"></i>
+            以下方向仅作为战略落地的参考，参赛团队可根据品牌现状、市场环境及自身分析选择合适的方向展开。
+            <br>Teams may choose appropriate directions based on brand diagnosis and market environment.
+        </p>
+    </div>
+
+    <!-- ===== 品牌卡片列表 ===== -->
+    <div class="row g-4">
+
+        <!-- 1. 霸王茶姬 -->
+        <div class="col-12">
+            <div class="card card-ubcc p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="display-6" style="color: var(--ubcc-orange);">🍵</span>
+                    <h3 class="fw-bold mb-0" style="color: var(--ubcc-dark);">霸王茶姬 <span style="font-size: 0.6rem; font-weight: 400; color: #888;">Chagee</span></h3>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-store me-1"></i>门店扩张策略</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>品牌未来应该优先进入哪些区域布局门店？应重点覆盖什么消费场景？</li>
+                            <li>如何根据香港市场特点采取更加谨慎的扩张策略？</li>
+                            <li>如何通过门店选址提高品牌曝光，同时保证单店盈利能力？</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-flask me-1"></i>产品与本地化</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>是否应该继续依靠经典爆款产品，还是开发更多新品？</li>
+                            <li>是否需要推出香港限定产品？</li>
+                            <li>如何在保持"东方茶文化"定位的同时提高本地认同感？</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-truck me-1"></i>供应链与运营</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>在香港市场是否需要建立更加本地化的供应链体系？</li>
+                            <li>如何通过供应商合作、库存管理和运营标准化降低成本？</li>
+                            <li>如何建立能够支持规模化发展的运营体系？</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 功夫茶 -->
+        <div class="col-12">
+            <div class="card card-ubcc p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="display-6" style="color: var(--ubcc-orange);">🧋</span>
+                    <h3 class="fw-bold mb-0" style="color: var(--ubcc-dark);">功夫茶 <span style="font-size: 0.6rem; font-weight: 400; color: #888;">Kung Fu Tea</span></h3>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-couch me-1"></i>第三空间策略</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>香港消费者是否需要茶饮社交空间？</li>
+                            <li>第三空间是否能够提高客单价和消费频率？</li>
+                            <li>功夫茶现有窗口店模式是否需要改变？</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-trophy me-1"></i>竞争优势与差异化</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>相较于传统糖水铺，功夫茶的优势在哪里？</li>
+                            <li>台式茶饮与香港传统甜品文化的差异在哪里？</li>
+                            <li>如何避免陷入同质化竞争？</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-leaf me-1"></i>台湾特色产品线</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>台湾茶文化如何转化为产品卖点？</li>
+                            <li>是否需要香港市场限定产品？</li>
+                            <li>如何平衡经典产品与创新产品？</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 天仁茗茶 -->
+        <div class="col-12">
+            <div class="card card-ubcc p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="display-6" style="color: var(--ubcc-orange);">🌿</span>
+                    <h3 class="fw-bold mb-0" style="color: var(--ubcc-dark);">天仁茗茶 <span style="font-size: 0.6rem; font-weight: 400; color: #888;">TenRen Tea</span></h3>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-lightbulb me-1"></i>产品创新与年轻化</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何将"专业茶品牌"优势转化为年轻消费者感知的价值？</li>
+                            <li>是否应该推出"四季茶饮"等轻量创新产品？</li>
+                            <li>如何通过"茶专业"打造差异化产品体验？</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-people-arrows me-1"></i>复合模式与消费者价值</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何进一步发挥"茶叶+茶饮"的差异化优势？</li>
+                            <li>如何设计会员权益促进茶叶零售转化？</li>
+                            <li>如何利用多渠道将现制茶饮消费转化为茶叶零售机会？</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-heart me-1"></i>品牌年轻化</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何改变年轻消费者认为其"可靠但老派"的认知？</li>
+                            <li>是否应该通过社交媒体内容或消费者共创增强品牌情感连接？</li>
+                            <li>如何利用20多年积累的真实消费者关系建立品牌故事？</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Silk -->
+        <div class="col-12">
+            <div class="card card-ubcc p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="display-6" style="color: var(--ubcc-orange);">🥤</span>
+                    <h3 class="fw-bold mb-0" style="color: var(--ubcc-dark);">SILK <span style="font-size: 0.6rem; font-weight: 400; color: #888;">港式精品茶饮</span></h3>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-undo me-1"></i>复购率提升</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何将逛街、游客打卡等低频场景转化为日常饮用习惯？</li>
+                            <li>是否需要提高新品更新频率，增加限时产品？</li>
+                            <li>如何避免产品线过度依赖少数爆款？</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-store-alt me-1"></i>门店布局拓展</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>是否应该进入办公区域、交通枢纽或社区？</li>
+                            <li>是否应该发展Express店型覆盖办公区域？</li>
+                            <li>如何平衡旗舰门店与快取店的价值？</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-mobile-alt me-1"></i>数字化运营</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>是否应该建立自有小程序点单系统？</li>
+                            <li>如何利用消费者数据分析购买习惯并提高复购率？</li>
+                            <li>如何利用数据提高鲜奶、水果等高损耗原材料的管理效率？</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 奈雪的茶 -->
+        <div class="col-12">
+            <div class="card card-ubcc p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="display-6" style="color: var(--ubcc-orange);">🫧</span>
+                    <h3 class="fw-bold mb-0" style="color: var(--ubcc-dark);">奈雪的茶 <span style="font-size: 0.6rem; font-weight: 400; color: #888;">Nayuki</span></h3>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-building me-1"></i>门店模型优化</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>是否应该从大型体验店转向更轻量化的小型门店模式？</li>
+                            <li>不同消费场景下如何设计不同门店模型？</li>
+                            <li>如何在控制成本的同时保留空间体验优势？</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-gem me-1"></i>品牌差异化</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何回答"为什么消费者选择奈雪"？</li>
+                            <li>"茶饮+软欧包+第三空间"是否仍适用于香港市场？</li>
+                            <li>是否应该通过本地文化合作、IP联名增强消费者认同？</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-shopping-cart me-1"></i>产品复购策略</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何降低高端价格定位与日常消费需求之间的矛盾？</li>
+                            <li>是否应该推出结合香港水果、茶文化的本地化限定产品？</li>
+                            <li>如何发挥"茶饮+软欧包"双产品模式的优势？</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 蜜雪冰城 -->
+        <div class="col-12">
+            <div class="card card-ubcc p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="display-6" style="color: var(--ubcc-orange);">❄️</span>
+                    <h3 class="fw-bold mb-0" style="color: var(--ubcc-dark);">蜜雪冰城 <span style="font-size: 0.6rem; font-weight: 400; color: #888;">Mixue</span></h3>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-store me-1"></i>门店扩张与加盟</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何调整扩张策略以适应香港高租金、高人工成本？</li>
+                            <li>是否继续依靠高密度门店布局，还是优先进入特定区域？</li>
+                            <li>如何保证加盟门店的服务质量和品牌一致性？</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-flask me-1"></i>产品策略适应</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>是否需要增加本地化和健康化产品？</li>
+                            <li>是否应该推出港式奶茶、特色水果茶或低糖系列？</li>
+                            <li>如何通过季节限定和创新提高购买频率？</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-bullhorn me-1"></i>本地化营销</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何调整营销方式以适应香港市场？</li>
+                            <li>如何结合香港本地文化、节日提高品牌接受度？</li>
+                            <li>如何降低消费者对于内地品牌的距离感？</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. 喜茶 -->
+        <div class="col-12">
+            <div class="card card-ubcc p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <span class="display-6" style="color: var(--ubcc-orange);">✨</span>
+                    <h3 class="fw-bold mb-0" style="color: var(--ubcc-dark);">喜茶 <span style="font-size: 0.6rem; font-weight: 400; color: #888;">Heytea</span></h3>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-rocket me-1"></i>产品创新</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何重新建立产品差异化，避免被快速复制？</li>
+                            <li>是否应该减少短周期新品依赖，打造长期经典产品？</li>
+                            <li>如何结合香港消费者偏好开发本地限定产品？</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-map-pin me-1"></i>门店与市场渗透</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>是否应该进入大学、办公区等高频消费场景？</li>
+                            <li>如何优化门店排队现象？</li>
+                            <li>如何通过本地化营销建立消费者连接？</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <p class="fw-bold small text-ubcc mb-1"><i class="fas fa-users me-1"></i>本地化营销</p>
+                        <ul class="text-secondary small" style="list-style-type: disc; padding-left: 20px; line-height: 1.8;">
+                            <li>如何利用本地KOL和社交媒体提高品牌影响力？</li>
+                            <li>如何避免仅作为"内地热门品牌"被短期尝鲜？</li>
+                            <li>如何增强香港消费者的本地认同感？</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 底部返回按钮 -->
+    <div class="text-center mt-5">
+        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc">
+            <i class="fas fa-arrow-left me-2"></i>返回日程表
+        </a>
+        <a href="{{ url_for('main.index') }}" class="btn btn-outline-ubcc ms-2">
+            <i class="fas fa-home me-2"></i>返回首页
+        </a>
+    </div>
+</div>
+
+{% endblock %}

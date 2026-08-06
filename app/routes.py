@@ -31,6 +31,10 @@ def activity_detail(id):
 def about():
     return render_template('about.html')
 
+@bp.route('/case-materials')
+def case_materials():
+    return render_template('case_materials.html')
+
 @bp.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
     error = None
