@@ -11,7 +11,6 @@ def index():
 
 @bp.route('/camp')
 def camp():
-    # 自定义时段排序顺序：Morning → Afternoon → Evening
     period_order = case(
         (Activity.period == 'Morning', 1),
         (Activity.period == 'Afternoon', 2),
@@ -21,6 +20,17 @@ def camp():
     activities = Activity.query.order_by(Activity.day, period_order).all()
     days = {}
     for act in activities:
+        # 根据活动标题决定跳转链接
+        if 'O-Campus' in act.title:
+            link = url_for('main.o_campus')
+        elif 'O-Hong' in act.title or '香港游' in act.title or 'O-HK' in act.title:
+            link = url_for('main.o_hk')
+        elif '西环' in act.title or 'O-西环' in act.title:
+            link = url_for('main.o_saiwan')
+        else:
+            link = url_for('main.activity_detail', id=act.id)
+        # 给每个活动添加 link 属性
+        act.link = link
         days.setdefault(act.day, []).append(act)
     return render_template('camp.html', days=days)
 

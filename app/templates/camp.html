@@ -1,42 +1,97 @@
 {% extends "base.html" %}
 {% block content %}
-<h2 class="mb-4">📅 日程表</h2>
 
-<!-- 按天显示 -->
-<ul class="nav nav-tabs" id="dayTab" role="tablist">
-    {% for day, items in days.items() %}
-    <li class="nav-item" role="presentation">
-        <button class="nav-link {% if loop.first %}active{% endif %}"
-                id="tab-{{ loop.index }}"
-                data-bs-toggle="tab"
-                data-bs-target="#day-{{ loop.index }}"
-                type="button" role="tab">
-            {{ day }}
-        </button>
-    </li>
-    {% endfor %}
-</ul>
-
-<div class="tab-content mt-3">
-    {% for day, items in days.items() %}
-    <div class="tab-pane fade {% if loop.first %}show active{% endif %}"
-         id="day-{{ loop.index }}" role="tabpanel">
-        <div class="list-group">
-            {% for act in items %}
-            <a href="{{ url_for('main.activity_detail', id=act.id) }}"
-               class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                <div>
-                    <span class="badge bg-secondary me-2">{{ act.time }}</span>
-                    <span class="badge bg-{{ 'danger' if act.room_need == 'red' else 'success' if act.room_need == 'green' else 'secondary' }}">
-                        {{ act.period }}
-                    </span>
-                    {{ act.title }}
-                </div>
-                <span class="badge bg-primary rounded-pill">詳情 →</span>
-            </a>
-            {% endfor %}
-        </div>
+<div class="container py-4">
+    <!-- 页面标题 -->
+    <div class="text-center mb-4">
+        <h1 class="display-4 fw-bold" style="color: var(--ubcc-dark);">
+            📅 <span class="text-ubcc">日程表</span>
+        </h1>
+        <p class="text-secondary">2026 UBCC Ocamp · 五日活动安排</p>
+        <hr class="w-25 mx-auto" style="border-color: var(--ubcc-orange); opacity: 0.4;">
     </div>
-    {% endfor %}
+
+    <!-- ===== 按天显示（Tab切换） ===== -->
+    <ul class="nav nav-tabs justify-content-center border-0 gap-2" id="dayTab" role="tablist" style="flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px;">
+        {% for day, items in days.items() %}
+        <li class="nav-item" role="presentation">
+            <button class="nav-link {% if loop.first %}active{% endif %}"
+                    id="tab-{{ loop.index }}"
+                    data-bs-toggle="tab"
+                    data-bs-target="#day-{{ loop.index }}"
+                    type="button" role="tab"
+                    style="border-radius: 50px; padding: 8px 24px; font-weight: 600; border: 2px solid var(--ubcc-orange); color: var(--ubcc-orange); background: transparent; transition: 0.3s;">
+                {{ day }}
+            </button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="tab-content mt-4">
+        {% for day, items in days.items() %}
+        <div class="tab-pane fade {% if loop.first %}show active{% endif %}"
+             id="day-{{ loop.index }}" role="tabpanel">
+
+            <!-- 该天活动卡片列表 -->
+            <div class="row g-3">
+                {% for act in items %}
+                <div class="col-12">
+                    <a href="{{ act.link }}" class="text-decoration-none">
+                        <div class="card card-ubcc p-3" style="border-left: 6px solid var(--ubcc-orange); transition: 0.3s;">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center">
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 4px 14px; border-radius: 50px; font-size: 0.8rem;">
+                                        {{ act.time }}
+                                    </span>
+                                    <span class="badge" style="background: #2C3E50; color: #fff; padding: 4px 14px; border-radius: 50px; font-size: 0.75rem;">
+                                        {{ act.period }}
+                                    </span>
+                                    <span class="fw-bold" style="color: var(--ubcc-dark); font-size: 1.05rem;">
+                                        {{ act.title }}
+                                    </span>
+                                </div>
+                                <span style="color: var(--ubcc-orange); font-size: 0.9rem; font-weight: 600;">
+                                    查看详情 <i class="fas fa-arrow-right ms-1"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- ===== 底部返回 ===== -->
+    <div class="text-center mt-4">
+        <a href="{{ url_for('main.index') }}" class="btn btn-outline-ubcc" style="border: 2px solid var(--ubcc-orange); color: var(--ubcc-orange); border-radius: 50px; padding: 8px 28px; font-weight: 600; text-decoration: none;">
+            <i class="fas fa-home me-2"></i>返回首页
+        </a>
+    </div>
 </div>
+
+<!-- 自定义样式：Tab 激活状态 -->
+<style>
+    .nav-tabs .nav-link.active {
+        background: var(--ubcc-orange) !important;
+        color: #fff !important;
+        border-color: var(--ubcc-orange) !important;
+    }
+    .nav-tabs .nav-link:hover:not(.active) {
+        background: rgba(245, 166, 35, 0.1);
+        border-color: var(--ubcc-orange);
+    }
+    .card-ubcc {
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        transition: 0.3s;
+        background: #fff;
+    }
+    .card-ubcc:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(245, 166, 35, 0.15);
+    }
+</style>
+
 {% endblock %}
