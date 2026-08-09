@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session
 from .models import Activity
 import markdown
+from sqlalchemy import case
 
 bp = Blueprint('main', __name__)
 
@@ -10,8 +11,14 @@ def index():
 
 @bp.route('/camp')
 def camp():
-    activities = Activity.query.order_by(Activity.day, Activity.period).all()
-    # 按天分组
+    # 自定义时段排序顺序：Morning → Afternoon → Evening
+    period_order = case(
+        (Activity.period == 'Morning', 1),
+        (Activity.period == 'Afternoon', 2),
+        (Activity.period == 'Evening', 3),
+        else_=4
+    )
+    activities = Activity.query.order_by(Activity.day, period_order).all()
     days = {}
     for act in activities:
         days.setdefault(act.day, []).append(act)
