@@ -194,37 +194,54 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <!-- 关于我们 (下拉) -->
+                <!-- 关于我们 -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('main.about') }}"><i class="fas fa-info-circle me-1"></i>关于我们</a>
+                    <a class="nav-link" href="{{ url_for('main.about') }}">
+                        <i class="fas fa-info-circle me-1"></i>关于我们
+                    </a>
                 </li>
 
-                <!-- 成员 (下拉) -->
+                <!-- 迎新营日程（独立入口） -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.camp') }}">
+                        <i class="fas fa-calendar-alt me-1"></i>迎新营日程
+                    </a>
+                </li>
+
+                <!-- 活动（下拉菜单：O-Campus / O-HK / O-西环） -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEvents" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-flag me-1"></i>活动
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-university"></i>O-Campus</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-city"></i>O-HK</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-umbrella-beach"></i>O-西环</a></li>
+                    </ul>
+                </li>
+
+                <!-- Case 资料库 -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('main.case_materials') }}">
+                        <i class="fas fa-file-alt me-1"></i>Case 资料库
+                    </a>
+                </li>
+
+                <!-- ===== 以下为暂时隐藏的模块（保留注释，后续可恢复） ===== -->
+                {#
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeam" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-users me-1"></i>成员
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#"><i class="fas fa-user-tie"></i>执行委员会</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-graduate"></i>组家长</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-graduate"></i>核心成员</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i>加入我们</a></li>
                     </ul>
                 </li>
+                #}
 
-                <!-- 活动 (下拉) -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEvents" role="button" data-bs-toggle="dropdown">
-                        <i class="fas fa-calendar-alt me-1"></i>活动
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ url_for('main.camp') }}"><i class="fas fa-campground"></i>迎新营日程</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('main.case_materials') }}"><i class="fas fa-file-alt"></i>Case资料库</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-chart-line"></i>过往活动</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-handshake"></i>合作活动</a></li>
-                    </ul>
-                </li>
-
-                <!-- 研究 / 项目 (下拉) -->
+                {#
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-flask me-1"></i>研究
@@ -234,32 +251,27 @@
                         <li><a class="dropdown-item" href="#"><i class="fas fa-book"></i>行业报告</a></li>
                     </ul>
                 </li>
+                #}
 
-                <!-- 招募 (无下拉) -->
+                {#
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-pen-fancy me-1"></i>招募</a>
                 </li>
+                #}
 
-                <!-- 联系方式 (无下拉) -->
+                <!-- 联系（页脚已有，导航保留简洁入口） -->
                 <li class="nav-item">
                     <a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i>联系</a>
                 </li>
 
-                <!-- 日程表快捷按钮（突出） -->
+                <!-- 日程表快捷按钮（保留，但导航里已有“迎新营日程”，可保留或删除） -->
+                {#
                 <li class="nav-item">
                     <a class="btn btn-ubcc-outline ms-2" href="{{ url_for('main.camp') }}" style="color:#fff; border-color:var(--ubcc-orange);">
                         <i class="fas fa-arrow-right"></i> 日程表
                     </a>
                 </li>
-<!--                <li class="nav-item dropdown">-->
-<!--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLang" role="button" data-bs-toggle="dropdown">-->
-<!--                        <i class="fas fa-globe me-1"></i>语言-->
-<!--                    </a>-->
-<!--                    <ul class="dropdown-menu dropdown-menu-end">-->
-<!--                        <li><a class="dropdown-item" href="#" onclick="switchLanguage('zh')">中文</a></li>-->
-<!--                        <li><a class="dropdown-item" href="#" onclick="switchLanguage('en')">English</a></li>-->
-<!--                    </ul>-->
-<!--                </li>-->
+                #}
             </ul>
         </div>
     </div>
@@ -280,7 +292,7 @@
                     <strong>UBCC 2026</strong> · University Business Consulting Club
                 </p>
 
-                <!-- 联系方式（替换部分） -->
+                <!-- 联系方式 -->
                 <p class="small mb-1">
                     <i class="fab fa-weixin me-1"></i> WeChat: UBCC
                 </p>
