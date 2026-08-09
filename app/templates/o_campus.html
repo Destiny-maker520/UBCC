@@ -1,252 +1,273 @@
+<!--{% extends "base.html" %}-->
+<!--{% block content %}-->
+
+<!--<div class="container py-5">-->
+<!--    &lt;!&ndash; ===== 英雄区 ===== &ndash;&gt;-->
+<!--    <div class="text-center mb-5">-->
+<!--        <div style="font-size: 4rem; line-height: 1.2;">🏫</div>-->
+<!--        <h1 class="display-3 fw-bold" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--            O-Campus <span style="color: var(&#45;&#45;ubcc-orange);">· 校园大冒险</span>-->
+<!--        </h1>-->
+<!--        <p class="fs-4 text-secondary mt-2">2026年8月27日 · 和你的队友一起解锁港大隐藏地图</p>-->
+<!--        <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">-->
+<!--            <span class="badge" style="background: var(&#45;&#45;ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">🎯 7 支队伍</span>-->
+<!--            <span class="badge" style="background: var(&#45;&#45;ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">⏱️ 3 小时</span>-->
+<!--            <span class="badge" style="background: var(&#45;&#45;ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">🏴‍☠️ 8 个挑战点</span>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 你的任务 ===== &ndash;&gt;-->
+<!--    <div class="card card-ubcc p-4 mb-4" style="background: linear-gradient(135deg, #fff8ee 0%, #fff 100%); border-left: 6px solid var(&#45;&#45;ubcc-orange);">-->
+<!--        <h3 class="fw-bold" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--            <i class="fas fa-flag text-ubcc me-2"></i>你的任务-->
+<!--        </h3>-->
+<!--        <p class="fs-5" style="color: #444; line-height: 1.8;">-->
+<!--            和你的 10–11 位队友一起，在港大校园里完成 <strong>8 个挑战点</strong>，同时找到藏匿在校园角落的 <strong>本组组徽</strong>。-->
+<!--        </p>-->
+<!--        <p class="text-muted" style="font-size: 1rem;">-->
+<!--            ⚡ 这不是速度竞赛。没有排名压力，不用跑。和队友一起探索、一起笑、一起迷路再找回方向——这才是 O-Campus 的正确打开方式。-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 游戏规则（卡片式） ===== &ndash;&gt;-->
+<!--    <h3 class="fw-bold mb-3" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--        <i class="fas fa-dice-d6 text-ubcc me-2"></i>怎么玩？-->
+<!--    </h3>-->
+
+<!--    <div class="row g-4 mb-4">-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="card card-ubcc p-4 h-100">-->
+<!--                <div style="font-size: 2.5rem; line-height: 1;">📍</div>-->
+<!--                <h5 class="fw-bold mt-2" style="color: var(&#45;&#45;ubcc-dark);">8 个挑战点</h5>-->
+<!--                <ul style="line-height: 2; color: #555; padding-left: 20px;">-->
+<!--                    <li><strong>🔥 3 个核心挑战</strong> —— 建议全部拿下</li>-->
+<!--                    <li><strong>🌟 5 个探索挑战</strong> —— 看心情、看人流，自由选择</li>-->
+<!--                </ul>-->
+<!--                <p class="text-muted small mb-0">每个挑战点都有 NPC 主持，完成后获得盖章。</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="card card-ubcc p-4 h-100">-->
+<!--                <div style="font-size: 2.5rem; line-height: 1;">🏴‍☠️</div>-->
+<!--                <h5 class="fw-bold mt-2" style="color: var(&#45;&#45;ubcc-dark);">组徽寻宝</h5>-->
+<!--                <p style="color: #555; line-height: 1.8;">-->
+<!--                    每组的组徽藏在校园的不同区域。拿到线索后，和队友一起推理、寻找。-->
+<!--                </p>-->
+<!--                <p style="color: #555; line-height: 1.8;">-->
+<!--                    💡 找不到？别硬撑 —— 向组家长求助，他们会给你提示。-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="row g-4 mb-4">-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="card card-ubcc p-4 h-100">-->
+<!--                <div style="font-size: 2.5rem; line-height: 1;">🗺️</div>-->
+<!--                <h5 class="fw-bold mt-2" style="color: var(&#45;&#45;ubcc-dark);">沿途探索点</h5>-->
+<!--                <p style="color: #555; line-height: 1.8;">-->
+<!--                    组家长会在路过时用 <strong>30 秒</strong> 介绍校园重要地点：-->
+<!--                </p>-->
+<!--                <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">-->
+<!--                    <span class="badge bg-light text-secondary border">Visitor Centre</span>-->
+<!--                    <span class="badge bg-light text-secondary border">HKU Station C1</span>-->
+<!--                    <span class="badge bg-light text-secondary border">Music Library</span>-->
+<!--                    <span class="badge bg-light text-secondary border">好龟池</span>-->
+<!--                    <span class="badge bg-light text-secondary border">Sun Yat-sen Statue</span>-->
+<!--                    <span class="badge bg-light text-secondary border">Rayson Huang Theatre</span>-->
+<!--                    <span class="badge bg-light text-secondary border">大学超市</span>-->
+<!--                    <span class="badge bg-light text-secondary border">University Health Service</span>-->
+<!--                    <span class="badge bg-light text-secondary border">Main Library</span>-->
+<!--                    <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">+ 更多...</span>-->
+<!--                </div>-->
+<!--                <p class="text-muted small mt-2 mb-0">不用特意去找，路过时听一下就好 —— 以后上课会用得到。</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="card card-ubcc p-4 h-100">-->
+<!--                <div style="font-size: 2.5rem; line-height: 1;">📋</div>-->
+<!--                <h5 class="fw-bold mt-2" style="color: var(&#45;&#45;ubcc-dark);">你的装备</h5>-->
+<!--                <p style="color: #555; line-height: 1.8;">-->
+<!--                    每组会收到 <strong>两张双面 A3 活动指南</strong>：-->
+<!--                </p>-->
+<!--                <ul style="line-height: 2; color: #555; padding-left: 20px;">-->
+<!--                    <li><strong>正面</strong>：校园地图（标出 8 个挑战点和沿途探索点）</li>-->
+<!--                    <li><strong>背面</strong>：挑战点列表 + 活动规则 + 紧急联络方式</li>-->
+<!--                </ul>-->
+<!--                <p class="text-muted small mb-0">📌 两张中只有一张有组号 —— 那是你的正式盖章本，别弄丢。</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 组徽藏匿地图 ===== &ndash;&gt;-->
+<!--    <h3 class="fw-bold mb-3" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--        <i class="fas fa-map text-ubcc me-2"></i>组徽藏在哪里？-->
+<!--    </h3>-->
+<!--    <div class="card card-ubcc p-4 mb-4">-->
+<!--        <p class="text-secondary mb-3" style="line-height: 1.8;">-->
+<!--            每组的组徽藏在校园的不同区域。找到它，是你们小组的专属成就 🏆-->
+<!--        </p>-->
+<!--        <div class="table-responsive">-->
+<!--            <table class="table table-hover" style="background: #fff; border-radius: 16px; overflow: hidden;">-->
+<!--                <thead style="background: var(&#45;&#45;ubcc-orange); color: #fff;">-->
+<!--                    <tr>-->
+<!--                        <th>你的队伍</th>-->
+<!--                        <th>组徽藏在哪？</th>-->
+<!--                        <th>从哪开始找？</th>-->
+<!--                    </tr>-->
+<!--                </thead>-->
+<!--                <tbody>-->
+<!--                    <tr><td>1组 · 黑芝麻豆花星冰乐</td><td>Visitor Centre 外围</td><td>百周年校园</td></tr>-->
+<!--                    <tr><td>2组 · 牛奶红豆冰</td><td>红墙附近</td><td>百周年校园</td></tr>-->
+<!--                    <tr><td>3组 · 杨枝甘露</td><td>Chi Wah G层入口附近</td><td>百周年校园</td></tr>-->
+<!--                    <tr><td>4组 · 咖喱鱼丸</td><td>Lee Shau Kee Lecture Centre LG附近</td><td>百周年校园</td></tr>-->
+<!--                    <tr><td>5组 · 鸡蛋仔</td><td>Main Library／Sun Yat-sen Steps附近</td><td>主校园</td></tr>-->
+<!--                    <tr><td>6组 · 凤梨包</td><td>Lily Pond附近</td><td>主校园</td></tr>-->
+<!--                    <tr><td>7组 · 冰火菠萝油</td><td>K. K. Leung Building 附近</td><td>主校园</td></tr>-->
+<!--                </tbody>-->
+<!--            </table>-->
+<!--        </div>-->
+<!--        <p class="text-muted small mb-0">-->
+<!--            💡 提示：组徽藏匿点不会在草坪、消防设施、垃圾桶或需要攀爬的位置。安全第一。-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 重要规则（游戏版） ===== &ndash;&gt;-->
+<!--    <h3 class="fw-bold mb-3" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--        <i class="fas fa-rules text-ubcc me-2"></i>游戏守则-->
+<!--    </h3>-->
+<!--    <div class="row g-3 mb-4">-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="card p-3" style="background: #f8fafc; border: 1px solid #e8ecf1; border-radius: 16px;">-->
+<!--                <p style="color: #555; line-height: 2; margin-bottom: 0;">-->
+<!--                    ✅ 全队一起行动，不能拆队<br>-->
+<!--                    ✅ 每个挑战最多尝试 2 次，NPC 会给你提示<br>-->
+<!--                    ✅ 同一站有人时，先去别的点，不排队<br>-->
+<!--                    ✅ 建议先在所在区域完成 1–2 个挑战再跨区-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6">-->
+<!--            <div class="card p-3" style="background: #f8fafc; border: 1px solid #e8ecf1; border-radius: 16px;">-->
+<!--                <p style="color: #555; line-height: 2; margin-bottom: 0;">-->
+<!--                    ✅ 不排名、不记录速度，慢慢走<br>-->
+<!--                    ✅ 禁止奔跑、推挤、攀爬、踩草坪<br>-->
+<!--                    ✅ 扶梯上站稳扶好，不要奔跑<br>-->
+<!--                    ✅ 身体不适或需要离队 → 立刻告诉组家长-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 奖励 ===== &ndash;&gt;-->
+<!--    <div class="card card-ubcc p-4 mb-4" style="border: 2px dashed var(&#45;&#45;ubcc-orange); background: #fffcf5;">-->
+<!--        <h3 class="fw-bold" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--            <i class="fas fa-trophy text-ubcc me-2"></i>奖励-->
+<!--        </h3>-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-6">-->
+<!--                <div style="background: #fff; border-radius: 16px; padding: 16px 20px; text-align: center; border: 1px solid #f0e6d8;">-->
+<!--                    <div style="font-size: 2rem;">🥇</div>-->
+<!--                    <p class="fw-bold mb-0" style="color: var(&#45;&#45;ubcc-dark);">前三名</p>-->
+<!--                    <p class="text-secondary small mb-0">完成 3 核心 + 2 探索 → <strong>自选 Case 题目</strong></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <div style="background: #fff; border-radius: 16px; padding: 16px 20px; text-align: center; border: 1px solid #f0e6d8;">-->
+<!--                    <div style="font-size: 2rem;">🎲</div>-->
+<!--                    <p class="fw-bold mb-0" style="color: var(&#45;&#45;ubcc-dark);">后四名</p>-->
+<!--                    <p class="text-secondary small mb-0">完成挑战 → <strong>抽签决定 Case 题目</strong></p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <p class="text-muted small mt-3 mb-0 text-center">-->
+<!--            ⏱️ 完成标准以活动当日 NPC 判定为准。不用急，稳扎稳打。-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 活动时间线 ===== &ndash;&gt;-->
+<!--    <h3 class="fw-bold mb-3" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--        <i class="fas fa-clock text-ubcc me-2"></i>时间线-->
+<!--    </h3>-->
+<!--    <div class="card card-ubcc p-4 mb-4">-->
+<!--        <div style="position: relative; padding-left: 20px; border-left: 4px solid var(&#45;&#45;ubcc-orange);">-->
+<!--            <div class="mb-3">-->
+<!--                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">09:40</span>-->
+<!--                <span style="color: #444;">在教室集合 · 领取你的活动指南</span>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">09:50</span>-->
+<!--                <span style="color: #444;">听规则 · 了解组徽寻宝线索</span>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">10:00</span>-->
+<!--                <span style="color: #444;"><strong>🎬 冒险开始！</strong> 出发探索</span>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">12:45</span>-->
+<!--                <span style="color: #444;">收到收尾提醒 · 优先完成手头任务</span>-->
+<!--            </div>-->
+<!--            <div class="mb-3">-->
+<!--                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">12:55</span>-->
+<!--                <span style="color: #444;">停止移动 · 清点人数</span>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">13:00</span>-->
+<!--                <span style="color: #444;"><strong>🏁 冒险结束</strong> · 原地解散，自行前往午餐 &amp; O-西环</span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 紧急情况 ===== &ndash;&gt;-->
+<!--    <div class="card card-ubcc p-4 mb-4" style="background: #f8f4ee; border: 1px solid #f0e6d8;">-->
+<!--        <h5 class="fw-bold" style="color: var(&#45;&#45;ubcc-dark);">-->
+<!--            <i class="fas fa-cloud-rain text-ubcc me-2"></i>如果下雨或台风怎么办？-->
+<!--        </h5>-->
+<!--        <div class="row g-3">-->
+<!--            <div class="col-md-6">-->
+<!--                <p class="fw-bold text-ubcc mb-1">🌧️ 下雨 → 教室版</p>-->
+<!--                <p class="text-secondary small" style="line-height: 1.8;">-->
+<!--                    在集合教室完成桌面任务：商业价值链、你画我猜、校园地图复原……<br>-->
+<!--                    规则和奖励不变，依然算完成。-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            <div class="col-md-6">-->
+<!--                <p class="fw-bold text-ubcc mb-1">🌪️ 台风 → Zoom 版</p>-->
+<!--                <p class="text-secondary small" style="line-height: 1.8;">-->
+<!--                    登录 Zoom，在 Breakout Room 完成任务。<br>-->
+<!--                    虚拟背景合照，电子完成记录。-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <p class="text-muted small mt-2 mb-0">-->
+<!--            📢 任何变动会提前在 O-Camp 新生大群通知。最迟前一天晚上 22:00 确认。-->
+<!--        </p>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; ===== 底部导航 ===== &ndash;&gt;-->
+<!--    <div class="text-center mt-4">-->
+<!--        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc">-->
+<!--            <i class="fas fa-arrow-left me-2"></i>返回日程表-->
+<!--        </a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--{% endblock %}-->
+
 {% extends "base.html" %}
 {% block content %}
 
 <div class="container py-5">
-    <!-- ===== 英雄区 ===== -->
-    <div class="text-center mb-5">
-        <div style="font-size: 4rem; line-height: 1.2;">🏫</div>
+    <div class="text-center">
         <h1 class="display-3 fw-bold" style="color: var(--ubcc-dark);">
-            O-Campus <span style="color: var(--ubcc-orange);">· 校园大冒险</span>
+            🏫 O-Campus <span style="color: var(--ubcc-orange);">校园大冒险</span>
         </h1>
-        <p class="fs-4 text-secondary mt-2">2026年8月27日 · 和你的队友一起解锁港大隐藏地图</p>
-        <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
-            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">🎯 7 支队伍</span>
-            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">⏱️ 3 小时</span>
-            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">🏴‍☠️ 8 个挑战点</span>
-        </div>
-    </div>
-
-    <!-- ===== 你的任务 ===== -->
-    <div class="card card-ubcc p-4 mb-4" style="background: linear-gradient(135deg, #fff8ee 0%, #fff 100%); border-left: 6px solid var(--ubcc-orange);">
-        <h3 class="fw-bold" style="color: var(--ubcc-dark);">
-            <i class="fas fa-flag text-ubcc me-2"></i>你的任务
-        </h3>
-        <p class="fs-5" style="color: #444; line-height: 1.8;">
-            和你的 10–11 位队友一起，在港大校园里完成 <strong>8 个挑战点</strong>，同时找到藏匿在校园角落的 <strong>本组组徽</strong>。
+        <p class="fs-4 text-secondary">2026年8月27日 · 和你的队友一起解锁港大隐藏地图</p>
+        <hr class="w-25 mx-auto" style="border-color: var(--ubcc-orange); opacity: 0.4;">
+        <p class="text-secondary" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+            本页面正在更新中，稍后会有完整内容呈现 🚀
         </p>
-        <p class="text-muted" style="font-size: 1rem;">
-            ⚡ 这不是速度竞赛。没有排名压力，不用跑。和队友一起探索、一起笑、一起迷路再找回方向——这才是 O-Campus 的正确打开方式。
-        </p>
-    </div>
-
-    <!-- ===== 游戏规则（卡片式） ===== -->
-    <h3 class="fw-bold mb-3" style="color: var(--ubcc-dark);">
-        <i class="fas fa-dice-d6 text-ubcc me-2"></i>怎么玩？
-    </h3>
-
-    <div class="row g-4 mb-4">
-        <div class="col-md-6">
-            <div class="card card-ubcc p-4 h-100">
-                <div style="font-size: 2.5rem; line-height: 1;">📍</div>
-                <h5 class="fw-bold mt-2" style="color: var(--ubcc-dark);">8 个挑战点</h5>
-                <ul style="line-height: 2; color: #555; padding-left: 20px;">
-                    <li><strong>🔥 3 个核心挑战</strong> —— 建议全部拿下</li>
-                    <li><strong>🌟 5 个探索挑战</strong> —— 看心情、看人流，自由选择</li>
-                </ul>
-                <p class="text-muted small mb-0">每个挑战点都有 NPC 主持，完成后获得盖章。</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card card-ubcc p-4 h-100">
-                <div style="font-size: 2.5rem; line-height: 1;">🏴‍☠️</div>
-                <h5 class="fw-bold mt-2" style="color: var(--ubcc-dark);">组徽寻宝</h5>
-                <p style="color: #555; line-height: 1.8;">
-                    每组的组徽藏在校园的不同区域。拿到线索后，和队友一起推理、寻找。
-                </p>
-                <p style="color: #555; line-height: 1.8;">
-                    💡 找不到？别硬撑 —— 向组家长求助，他们会给你提示。
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row g-4 mb-4">
-        <div class="col-md-6">
-            <div class="card card-ubcc p-4 h-100">
-                <div style="font-size: 2.5rem; line-height: 1;">🗺️</div>
-                <h5 class="fw-bold mt-2" style="color: var(--ubcc-dark);">沿途探索点</h5>
-                <p style="color: #555; line-height: 1.8;">
-                    组家长会在路过时用 <strong>30 秒</strong> 介绍校园重要地点：
-                </p>
-                <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px;">
-                    <span class="badge bg-light text-secondary border">Visitor Centre</span>
-                    <span class="badge bg-light text-secondary border">HKU Station C1</span>
-                    <span class="badge bg-light text-secondary border">Music Library</span>
-                    <span class="badge bg-light text-secondary border">好龟池</span>
-                    <span class="badge bg-light text-secondary border">Sun Yat-sen Statue</span>
-                    <span class="badge bg-light text-secondary border">Rayson Huang Theatre</span>
-                    <span class="badge bg-light text-secondary border">大学超市</span>
-                    <span class="badge bg-light text-secondary border">University Health Service</span>
-                    <span class="badge bg-light text-secondary border">Main Library</span>
-                    <span class="badge bg-light text-secondary border" style="font-size: 0.75rem;">+ 更多...</span>
-                </div>
-                <p class="text-muted small mt-2 mb-0">不用特意去找，路过时听一下就好 —— 以后上课会用得到。</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card card-ubcc p-4 h-100">
-                <div style="font-size: 2.5rem; line-height: 1;">📋</div>
-                <h5 class="fw-bold mt-2" style="color: var(--ubcc-dark);">你的装备</h5>
-                <p style="color: #555; line-height: 1.8;">
-                    每组会收到 <strong>两张双面 A3 活动指南</strong>：
-                </p>
-                <ul style="line-height: 2; color: #555; padding-left: 20px;">
-                    <li><strong>正面</strong>：校园地图（标出 8 个挑战点和沿途探索点）</li>
-                    <li><strong>背面</strong>：挑战点列表 + 活动规则 + 紧急联络方式</li>
-                </ul>
-                <p class="text-muted small mb-0">📌 两张中只有一张有组号 —— 那是你的正式盖章本，别弄丢。</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== 组徽藏匿地图 ===== -->
-    <h3 class="fw-bold mb-3" style="color: var(--ubcc-dark);">
-        <i class="fas fa-map text-ubcc me-2"></i>组徽藏在哪里？
-    </h3>
-    <div class="card card-ubcc p-4 mb-4">
-        <p class="text-secondary mb-3" style="line-height: 1.8;">
-            每组的组徽藏在校园的不同区域。找到它，是你们小组的专属成就 🏆
-        </p>
-        <div class="table-responsive">
-            <table class="table table-hover" style="background: #fff; border-radius: 16px; overflow: hidden;">
-                <thead style="background: var(--ubcc-orange); color: #fff;">
-                    <tr>
-                        <th>你的队伍</th>
-                        <th>组徽藏在哪？</th>
-                        <th>从哪开始找？</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>1组 · 黑芝麻豆花星冰乐</td><td>Visitor Centre 外围</td><td>百周年校园</td></tr>
-                    <tr><td>2组 · 牛奶红豆冰</td><td>红墙附近</td><td>百周年校园</td></tr>
-                    <tr><td>3组 · 杨枝甘露</td><td>Chi Wah G层入口附近</td><td>百周年校园</td></tr>
-                    <tr><td>4组 · 咖喱鱼丸</td><td>Lee Shau Kee Lecture Centre LG附近</td><td>百周年校园</td></tr>
-                    <tr><td>5组 · 鸡蛋仔</td><td>Main Library／Sun Yat-sen Steps附近</td><td>主校园</td></tr>
-                    <tr><td>6组 · 凤梨包</td><td>Lily Pond附近</td><td>主校园</td></tr>
-                    <tr><td>7组 · 冰火菠萝油</td><td>K. K. Leung Building 附近</td><td>主校园</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <p class="text-muted small mb-0">
-            💡 提示：组徽藏匿点不会在草坪、消防设施、垃圾桶或需要攀爬的位置。安全第一。
-        </p>
-    </div>
-
-    <!-- ===== 重要规则（游戏版） ===== -->
-    <h3 class="fw-bold mb-3" style="color: var(--ubcc-dark);">
-        <i class="fas fa-rules text-ubcc me-2"></i>游戏守则
-    </h3>
-    <div class="row g-3 mb-4">
-        <div class="col-md-6">
-            <div class="card p-3" style="background: #f8fafc; border: 1px solid #e8ecf1; border-radius: 16px;">
-                <p style="color: #555; line-height: 2; margin-bottom: 0;">
-                    ✅ 全队一起行动，不能拆队<br>
-                    ✅ 每个挑战最多尝试 2 次，NPC 会给你提示<br>
-                    ✅ 同一站有人时，先去别的点，不排队<br>
-                    ✅ 建议先在所在区域完成 1–2 个挑战再跨区
-                </p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card p-3" style="background: #f8fafc; border: 1px solid #e8ecf1; border-radius: 16px;">
-                <p style="color: #555; line-height: 2; margin-bottom: 0;">
-                    ✅ 不排名、不记录速度，慢慢走<br>
-                    ✅ 禁止奔跑、推挤、攀爬、踩草坪<br>
-                    ✅ 扶梯上站稳扶好，不要奔跑<br>
-                    ✅ 身体不适或需要离队 → 立刻告诉组家长
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== 奖励 ===== -->
-    <div class="card card-ubcc p-4 mb-4" style="border: 2px dashed var(--ubcc-orange); background: #fffcf5;">
-        <h3 class="fw-bold" style="color: var(--ubcc-dark);">
-            <i class="fas fa-trophy text-ubcc me-2"></i>奖励
-        </h3>
-        <div class="row">
-            <div class="col-md-6">
-                <div style="background: #fff; border-radius: 16px; padding: 16px 20px; text-align: center; border: 1px solid #f0e6d8;">
-                    <div style="font-size: 2rem;">🥇</div>
-                    <p class="fw-bold mb-0" style="color: var(--ubcc-dark);">前三名</p>
-                    <p class="text-secondary small mb-0">完成 3 核心 + 2 探索 → <strong>自选 Case 题目</strong></p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div style="background: #fff; border-radius: 16px; padding: 16px 20px; text-align: center; border: 1px solid #f0e6d8;">
-                    <div style="font-size: 2rem;">🎲</div>
-                    <p class="fw-bold mb-0" style="color: var(--ubcc-dark);">后四名</p>
-                    <p class="text-secondary small mb-0">完成挑战 → <strong>抽签决定 Case 题目</strong></p>
-                </div>
-            </div>
-        </div>
-        <p class="text-muted small mt-3 mb-0 text-center">
-            ⏱️ 完成标准以活动当日 NPC 判定为准。不用急，稳扎稳打。
-        </p>
-    </div>
-
-    <!-- ===== 活动时间线 ===== -->
-    <h3 class="fw-bold mb-3" style="color: var(--ubcc-dark);">
-        <i class="fas fa-clock text-ubcc me-2"></i>时间线
-    </h3>
-    <div class="card card-ubcc p-4 mb-4">
-        <div style="position: relative; padding-left: 20px; border-left: 4px solid var(--ubcc-orange);">
-            <div class="mb-3">
-                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">09:40</span>
-                <span style="color: #444;">在教室集合 · 领取你的活动指南</span>
-            </div>
-            <div class="mb-3">
-                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">09:50</span>
-                <span style="color: #444;">听规则 · 了解组徽寻宝线索</span>
-            </div>
-            <div class="mb-3">
-                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">10:00</span>
-                <span style="color: #444;"><strong>🎬 冒险开始！</strong> 出发探索</span>
-            </div>
-            <div class="mb-3">
-                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">12:45</span>
-                <span style="color: #444;">收到收尾提醒 · 优先完成手头任务</span>
-            </div>
-            <div class="mb-3">
-                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">12:55</span>
-                <span style="color: #444;">停止移动 · 清点人数</span>
-            </div>
-            <div>
-                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">13:00</span>
-                <span style="color: #444;"><strong>🏁 冒险结束</strong> · 原地解散，自行前往午餐 &amp; O-西环</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== 紧急情况 ===== -->
-    <div class="card card-ubcc p-4 mb-4" style="background: #f8f4ee; border: 1px solid #f0e6d8;">
-        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
-            <i class="fas fa-cloud-rain text-ubcc me-2"></i>如果下雨或台风怎么办？
-        </h5>
-        <div class="row g-3">
-            <div class="col-md-6">
-                <p class="fw-bold text-ubcc mb-1">🌧️ 下雨 → 教室版</p>
-                <p class="text-secondary small" style="line-height: 1.8;">
-                    在集合教室完成桌面任务：商业价值链、你画我猜、校园地图复原……<br>
-                    规则和奖励不变，依然算完成。
-                </p>
-            </div>
-            <div class="col-md-6">
-                <p class="fw-bold text-ubcc mb-1">🌪️ 台风 → Zoom 版</p>
-                <p class="text-secondary small" style="line-height: 1.8;">
-                    登录 Zoom，在 Breakout Room 完成任务。<br>
-                    虚拟背景合照，电子完成记录。
-                </p>
-            </div>
-        </div>
-        <p class="text-muted small mt-2 mb-0">
-            📢 任何变动会提前在 O-Camp 新生大群通知。最迟前一天晚上 22:00 确认。
-        </p>
-    </div>
-
-    <!-- ===== 底部导航 ===== -->
-    <div class="text-center mt-4">
-        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc">
+        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc mt-4">
             <i class="fas fa-arrow-left me-2"></i>返回日程表
         </a>
     </div>
