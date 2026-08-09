@@ -43,6 +43,10 @@ def o_campus():
 def o_hk():
     return render_template('o_hk.html')
 
+@bp.route('/o-saiwan')
+def o_saiwan():
+    return render_template('o_saiwan.html')
+
 @bp.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
     error = None

@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+    <!-- ===== 英雄区 ===== -->
+    <div class="text-center mb-5">
+        <div style="font-size: 4rem; line-height: 1.2;">🚶</div>
+        <h1 class="display-3 fw-bold" style="color: var(--ubcc-dark);">
+            O-西环 <span style="color: var(--ubcc-orange);">· 城市漫游</span>
+        </h1>
+        <p class="fs-4 text-secondary mt-2">2026年8月27日 13:30 – 17:30 · 和队友一起漫步西环</p>
+        <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">📍 3 个区域</span>
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">📸 自由探索</span>
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">🏆 不评分</span>
+        </div>
+    </div>
+
+    <!-- ===== 你的任务 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="background: linear-gradient(135deg, #fff8ee 0%, #fff 100%); border-left: 6px solid var(--ubcc-orange);">
+        <h3 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-flag text-ubcc me-2"></i>今天怎么玩？
+        </h3>
+        <p class="fs-5" style="color: #444; line-height: 1.8;">
+            从 <strong>香港大学</strong> 或 <strong>坚尼地城地铁站 B 出口</strong> 出发，和队友一起漫步西环，用眼睛和相机记录沿途的发现。
+        </p>
+        <div style="background: #fff; border-radius: 16px; padding: 16px 20px; margin-top: 12px;">
+            <p style="color: #555; line-height: 1.8; margin-bottom: 0;">
+                📸 <strong>出发前</strong>：整组合照一张，由组 OC 发在 OC 群中。
+            </p>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 0;">
+                🎯 <strong>没有固定路线</strong>，没有打卡顺序，没有评分。
+            </p>
+            <p style="color: #555; line-height: 1.8; margin-bottom: 0;">
+                🏆 <strong>不是比赛</strong>，和队友一起走走看看就很棒。
+            </p>
+        </div>
+    </div>
+
+    <!-- ===== 探索区域 ===== -->
+    <h3 class="fw-bold mb-3" style="color: var(--ubcc-dark);">
+        <i class="fas fa-map-pin text-ubcc me-2"></i>探索区域
+    </h3>
+    <p class="text-secondary mb-4">西环分为三个区域，每个区域都有自己独特的烟火气。走着走着，你会发现很多惊喜。</p>
+
+    <div class="row g-4 mb-4">
+        <!-- 西营盘 -->
+        <div class="col-md-4">
+            <div class="card card-ubcc p-4 h-100 text-center">
+                <div style="font-size: 3rem; line-height: 1.2;">🏛️</div>
+                <h4 class="fw-bold mt-2" style="color: var(--ubcc-dark);">西营盘</h4>
+                <p class="text-secondary small" style="line-height: 1.8;">
+                    老街区 · 市井烟火<br>
+                    街市、壁画、老字号
+                </p>
+                <div style="border-top: 1px solid #f0e6d8; padding-top: 12px; margin-top: 8px;">
+                    <span class="badge bg-light text-secondary border">西营盘街市</span>
+                    <span class="badge bg-light text-secondary border">正街街市</span>
+                    <span class="badge bg-light text-secondary border">中山纪念公园</span>
+                    <span class="badge bg-light text-secondary border">涂鸦壁画</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 石塘咀 -->
+        <div class="col-md-4">
+            <div class="card card-ubcc p-4 h-100 text-center">
+                <div style="font-size: 3rem; line-height: 1.2;">🍜</div>
+                <h4 class="fw-bold mt-2" style="color: var(--ubcc-dark);">石塘咀</h4>
+                <p class="text-secondary small" style="line-height: 1.8;">
+                    美食聚集地 · 多元风味<br>
+                    螺蛳粉、凉皮、越南菜
+                </p>
+                <div style="border-top: 1px solid #f0e6d8; padding-top: 12px; margin-top: 8px;">
+                    <span class="badge bg-light text-secondary border">屈地街</span>
+                    <span class="badge bg-light text-secondary border">石塘咀山道</span>
+                    <span class="badge bg-light text-secondary border">石塘咀体育馆</span>
+                    <span class="badge bg-light text-secondary border">巴依餐厅</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 坚尼地城 -->
+        <div class="col-md-4">
+            <div class="card card-ubcc p-4 h-100 text-center">
+                <div style="font-size: 3rem; line-height: 1.2;">🌊</div>
+                <h4 class="fw-bold mt-2" style="color: var(--ubcc-dark);">坚尼地城</h4>
+                <p class="text-secondary small" style="line-height: 1.8;">
+                    海边 · 老店 · 叮叮车<br>
+                    西环泳棚、海傍、老字号
+                </p>
+                <div style="border-top: 1px solid #f0e6d8; padding-top: 12px; margin-top: 8px;">
+                    <span class="badge bg-light text-secondary border">西环泳棚</span>
+                    <span class="badge bg-light text-secondary border">叮叮车</span>
+                    <span class="badge bg-light text-secondary border">New Praya 路牌</span>
+                    <span class="badge bg-light text-secondary border">可可店</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 一些你可以尝试做的事 ===== -->
+    <div class="card card-ubcc p-4 mb-4">
+        <h4 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-list text-ubcc me-2"></i>一些你可以尝试做的事
+        </h4>
+        <p class="text-secondary mb-3" style="line-height: 1.8;">
+            以下只是灵感清单，不用全部完成。随性走走，遇到什么算什么。
+        </p>
+        <div class="row g-2">
+            <div class="col-md-4">
+                <ul style="list-style-type: none; padding-left: 0; line-height: 2.2; color: #555;">
+                    <li>📮 找到西营盘邮局</li>
+                    <li>🏛️ 找到中山纪念公园</li>
+                    <li>🎨 找到一幅街头涂鸦</li>
+                    <li>🍜 找到一家东北菜</li>
+                    <li>🍵 找到一家抹茶店</li>
+                    <li>🌟 找到一家米芝莲推荐餐厅</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul style="list-style-type: none; padding-left: 0; line-height: 2.2; color: #555;">
+                    <li>🍲 找到一家螺蛳粉店</li>
+                    <li>🥗 找到一家凉皮店</li>
+                    <li>🧋 找到一家奶茶店</li>
+                    <li>🎬 找到石塘咀山道</li>
+                    <li>📸 拍一张《胭脂扣》同款照片</li>
+                    <li>🚃 和叮叮车合影</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul style="list-style-type: none; padding-left: 0; line-height: 2.2; color: #555;">
+                    <li>🌊 找到西环泳棚</li>
+                    <li>📸 和 "New Praya" 路牌合照</li>
+                    <li>🐱 偶遇一只猫猫/狗狗</li>
+                    <li>🚇 乘坐一种交通工具</li>
+                    <li>🛒 找到一家惠康/百佳</li>
+                    <li>🏧 找到一家银行</li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-muted small mt-2 mb-0">
+            💡 以上只是参考，不用全部打卡。发现属于你们自己的西环宝藏，才是最重要的。
+        </p>
+    </div>
+
+    <!-- ===== 规则小贴士 ===== -->
+    <div class="row g-3 mb-4">
+        <div class="col-md-6">
+            <div class="card p-3" style="background: #f8fafc; border: 1px solid #e8ecf1; border-radius: 16px; height: 100%;">
+                <p style="color: #555; line-height: 2; margin-bottom: 0;">
+                    ✅ 全组集体行动，不要掉队<br>
+                    ✅ 注意安全，留意来往车辆<br>
+                    ✅ 保持安静，不要喧哗
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-3" style="background: #f8fafc; border: 1px solid #e8ecf1; border-radius: 16px; height: 100%;">
+                <p style="color: #555; line-height: 2; margin-bottom: 0;">
+                    ✅ 不推路障，不乱丢垃圾<br>
+                    ✅ 扶手电梯左行右立<br>
+                    ✅ 宠物店注意是否允许拍摄
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 出发指南 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="background: #f8f4ee; border: 1px solid #f0e6d8;">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-compass text-ubcc me-2"></i>出发指南
+        </h5>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 从哪里出发？</p>
+                <p class="text-secondary small" style="line-height: 1.8;">
+                    可以选择从 <strong>香港大学地铁站</strong> 或 <strong>坚尼地城地铁站 B 出口</strong> 出发。<br>
+                    出发前整组合照一张，发在 OC 群中。
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">⏰ 什么时间回来？</p>
+                <p class="text-secondary small" style="line-height: 1.8;">
+                    活动于 <strong>17:30</strong> 结束。<br>
+                    记得留出时间返回学校，参加后续环节。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 底部导航 ===== -->
+    <div class="text-center mt-4">
+        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc">
+            <i class="fas fa-arrow-left me-2"></i>返回日程表
+        </a>
+    </div>
+</div>
+
+{% endblock %}
