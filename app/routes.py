@@ -35,6 +35,10 @@ def about():
 def case_materials():
     return render_template('case_materials.html')
 
+@bp.route('/o-campus')
+def o_campus():
+    return render_template('o_campus.html')
+
 @bp.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
     error = None
