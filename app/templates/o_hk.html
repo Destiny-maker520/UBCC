@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+    <!-- ===== 英雄区 ===== -->
+    <div class="text-center mb-5">
+        <div style="font-size: 4rem; line-height: 1.2;">🌆</div>
+        <h1 class="display-3 fw-bold" style="color: var(--ubcc-dark);">
+            O-HK <span style="color: var(--ubcc-orange);">· 香港大暴走</span>
+        </h1>
+        <p class="fs-4 text-secondary mt-2">2026年8月28日 · 和队友一起解锁香港的 N 种打开方式</p>
+        <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">⏱️ 9:30 – 17:30</span>
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">🗺️ 7 条路线</span>
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">📸 记得拍素材</span>
+        </div>
+    </div>
+
+    <!-- ===== 你的任务 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="background: linear-gradient(135deg, #fff8ee 0%, #fff 100%); border-left: 6px solid var(--ubcc-orange);">
+        <h3 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-flag text-ubcc me-2"></i>今天怎么玩？
+        </h3>
+        <p class="fs-5" style="color: #444; line-height: 1.8;">
+            从 <strong>7 条路线</strong> 里选 <strong>1～2 条</strong>，和队友一起出发探索香港！
+        </p>
+        <p style="color: #555; line-height: 1.8; font-size: 1rem;">
+            📸 全程没有任务点、没有盖章、没有排名。唯一的要求是：<strong>多拍照片和视频</strong>，为你们的 Minivlog 积累素材。
+        </p>
+        <p class="text-muted" style="font-size: 0.95rem;">
+            ⏰ 注意时间，17:30 前要回到学校参加 <strong>仲夏夜聊 2.0</strong> 哦。
+        </p>
+    </div>
+
+    <!-- ===== 路线选择 ===== -->
+    <h3 class="fw-bold mb-3" style="color: var(--ubcc-dark);">
+        <i class="fas fa-route text-ubcc me-2"></i>选一条路线出发吧
+    </h3>
+    <p class="text-secondary mb-4">每条路线都标注了 <strong>预计时间</strong> 和 <strong>交通方式</strong>，可以根据天气和体力灵活调整。</p>
+
+    <!-- 1. 西贡 -->
+    <div class="card card-ubcc p-4 mb-3">
+        <div class="d-flex align-items-center gap-3">
+            <span style="font-size: 2.5rem;">⛵</span>
+            <div>
+                <h4 class="fw-bold mb-0" style="color: var(--ubcc-dark);">西贡 · 海风与海鲜</h4>
+                <span class="badge" style="background: var(--ubcc-orange); color: #fff;">半天～全天</span>
+            </div>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">📍 推荐路线</p>
+                <p class="text-secondary" style="line-height: 1.8;">海鲜街 → 西贡海傍广场 → 西贡码头 →（坐船）厦门湾 → 桥咀</p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 怎么去</p>
+                <p class="text-secondary" style="line-height: 1.8;">港铁到彩虹站 → 换乘小巴 1A 或 92 号巴士 → 西贡码头公交站</p>
+            </div>
+        </div>
+        <div class="mt-2">
+            <p class="fw-bold text-ubcc mb-1">🍜 美食推荐</p>
+            <p class="text-secondary" style="line-height: 1.8;">海鲜街（现捞海鲜）· 小满定律（乳酪雪糕）· Little Cove Espresso（Brunch）</p>
+        </div>
+        <div class="mt-2" style="background: #f8fafc; border-radius: 12px; padding: 12px 16px;">
+            <p class="text-muted small mb-0">💡 小巴只接受八达通，记得提前准备好。注意防晒和带雨伞 ☀️🌂</p>
+        </div>
+    </div>
+
+    <!-- 2. 鹤咀 -->
+    <div class="card card-ubcc p-4 mb-3">
+        <div class="d-flex align-items-center gap-3">
+            <span style="font-size: 2.5rem;">🌊</span>
+            <div>
+                <h4 class="fw-bold mb-0" style="color: var(--ubcc-dark);">鹤咀 · 海岸与鲸骨</h4>
+                <span class="badge" style="background: var(--ubcc-orange); color: #fff;">半天～全天</span>
+            </div>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">📍 涵盖地点</p>
+                <p class="text-secondary" style="line-height: 1.8;">石澳（沙滩、情人桥、彩色街道）· 鹤咀（鲸鱼骨架、蟹洞）</p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 怎么去</p>
+                <p class="text-secondary" style="line-height: 1.8;">港岛线筲箕湾 A3 出口 → 小巴/新巴 9 路至石澳 → 鹤咀站下车 → 徒步至蟹洞</p>
+            </div>
+        </div>
+        <div class="mt-2" style="background: #f8fafc; border-radius: 12px; padding: 12px 16px;">
+            <p class="text-muted small mb-0">💡 海边礁石多，建议穿舒适的鞋子。晴天时彩色房子和海景非常出片 📸</p>
+        </div>
+    </div>
+
+    <!-- 3. 慈山寺 -->
+    <div class="card card-ubcc p-4 mb-3">
+        <div class="d-flex align-items-center gap-3">
+            <span style="font-size: 2.5rem;">🏯</span>
+            <div>
+                <h4 class="fw-bold mb-0" style="color: var(--ubcc-dark);">慈山寺 · 静心之旅</h4>
+                <span class="badge" style="background: var(--ubcc-orange); color: #fff;">半天～全天</span>
+            </div>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">📍 体验项目</p>
+                <p class="text-secondary" style="line-height: 1.8;">供佛（以水代香）· 免费下午茶（13:30 后）· 结缘素包（12:00 后）· 抄经</p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 怎么去</p>
+                <p class="text-secondary" style="line-height: 1.8;">地铁到大埔墟站 → 换乘 20B 公交车 → 慈山寺脚下 → 步行 10 分钟</p>
+            </div>
+        </div>
+        <div class="mt-2" style="background: #f8fafc; border-radius: 12px; padding: 12px 16px;">
+            <p class="text-muted small mb-0">⚠️ 需提前网上预约，有名额限制。不可穿太暴露，记得带身份证。</p>
+        </div>
+    </div>
+
+    <!-- 4. 西九龙文化区 -->
+    <div class="card card-ubcc p-4 mb-3">
+        <div class="d-flex align-items-center gap-3">
+            <span style="font-size: 2.5rem;">🎨</span>
+            <div>
+                <h4 class="fw-bold mb-0" style="color: var(--ubcc-dark);">西九龙文化区 · 艺术与海景</h4>
+                <span class="badge" style="background: var(--ubcc-orange); color: #fff;">半天～全天</span>
+            </div>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">📍 涵盖地点</p>
+                <p class="text-secondary" style="line-height: 1.8;">M+ 艺术馆 · 故宫博物馆 · 海滨长廊</p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 怎么去</p>
+                <p class="text-secondary" style="line-height: 1.8;">九龙站 A 出口步行 15 分钟 / 柯士甸站 D2 出口转 CX1 巴士</p>
+            </div>
+        </div>
+        <div class="mt-2" style="background: #f8fafc; border-radius: 12px; padding: 12px 16px;">
+            <p class="text-muted small mb-0">⚠️ M+（周一闭馆）和故宫博物馆（周二闭馆）都需提前网上预约。</p>
+        </div>
+    </div>
+
+    <!-- 5. 长洲岛 -->
+    <div class="card card-ubcc p-4 mb-3">
+        <div class="d-flex align-items-center gap-3">
+            <span style="font-size: 2.5rem;">⛴️</span>
+            <div>
+                <h4 class="fw-bold mb-0" style="color: var(--ubcc-dark);">长洲岛 · 离岛慢生活</h4>
+                <span class="badge" style="background: var(--ubcc-orange); color: #fff;">半天～全天</span>
+            </div>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">📍 推荐路线</p>
+                <p class="text-secondary" style="line-height: 1.8;">长洲码头 → 东湾路 → 东湾泳滩 → 观音庙 → 小长城 → 市集</p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 怎么去</p>
+                <p class="text-secondary" style="line-height: 1.8;">中环地铁站 5 号码头乘坐渡轮</p>
+            </div>
+        </div>
+        <div class="mt-2">
+            <p class="fw-bold text-ubcc mb-1">🍜 美食推荐</p>
+            <p class="text-secondary" style="line-height: 1.8;">芒果糯米糍 · 大鱼蛋 · 炸雪糕</p>
+        </div>
+        <div class="mt-2" style="background: #f8fafc; border-radius: 12px; padding: 12px 16px;">
+            <p class="text-muted small mb-0">💡 岛上基本只收现金港币，需要提前准备好。注意防晒和舒适的鞋子。</p>
+        </div>
+    </div>
+
+    <!-- 6. 赤柱 -->
+    <div class="card card-ubcc p-4 mb-3">
+        <div class="d-flex align-items-center gap-3">
+            <span style="font-size: 2.5rem;">🌅</span>
+            <div>
+                <h4 class="fw-bold mb-0" style="color: var(--ubcc-dark);">赤柱 · 海畔与日落</h4>
+                <span class="badge" style="background: var(--ubcc-orange); color: #fff;">半天～全天</span>
+            </div>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">📍 推荐路线</p>
+                <p class="text-secondary" style="line-height: 1.8;">赤柱广场 → 赤柱大街（Brunch）→ 美利楼 → 海滨长廊 → 赤柱沙滩（看日落）</p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 怎么去</p>
+                <p class="text-secondary" style="line-height: 1.8;">地铁到金钟 C1 出口 → 转 6 号巴士</p>
+            </div>
+        </div>
+        <div class="mt-2">
+            <p class="fw-bold text-ubcc mb-1">🍜 美食推荐</p>
+            <p class="text-secondary" style="line-height: 1.8;">金记冰室 · 赤柱大街小黄屋</p>
+        </div>
+        <div class="mt-2" style="background: #f8fafc; border-radius: 12px; padding: 12px 16px;">
+            <p class="text-muted small mb-0">💡 注意防晒和带雨伞。回程可以在铜锣湾吃小吃 🍢</p>
+        </div>
+    </div>
+
+    <!-- 7. 油尖旺区逛吃 -->
+    <div class="card card-ubcc p-4 mb-4">
+        <div class="d-flex align-items-center gap-3">
+            <span style="font-size: 2.5rem;">🍜</span>
+            <div>
+                <h4 class="fw-bold mb-0" style="color: var(--ubcc-dark);">油尖旺 · 城市烟火气</h4>
+                <span class="badge" style="background: var(--ubcc-orange); color: #fff;">全天</span>
+            </div>
+        </div>
+        <div class="row g-3 mt-3">
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">📍 涵盖地点</p>
+                <p class="text-secondary" style="line-height: 1.8;">
+                    <strong>油麻地：</strong>庙街夜市 · 油麻地警署<br>
+                    <strong>尖沙咀：</strong>星光大道 · K11 MUSEA · 天星小轮 · 钟楼<br>
+                    <strong>旺角：</strong>女人街 · 金鱼街 · 朗豪坊
+                </p>
+            </div>
+            <div class="col-md-6">
+                <p class="fw-bold text-ubcc mb-1">🚇 怎么去</p>
+                <p class="text-secondary" style="line-height: 1.8;">港岛线至中环 → 转荃湾线至尖沙咀/佐敦/旺角站</p>
+                <p class="text-muted small mt-1">回程可从尖沙咀乘天星小轮至湾仔 ⛴️</p>
+            </div>
+        </div>
+        <div class="mt-2">
+            <p class="fw-bold text-ubcc mb-1">🍜 美食推荐</p>
+            <p class="text-secondary" style="line-height: 1.8;">
+                <strong>油麻地：</strong>红茶冰室 · 加多娜面包 · 通达食店<br>
+                <strong>尖沙咀：</strong>旺记冰室<br>
+                <strong>旺角：</strong>妈咪鸡蛋仔 · 肥姐小吃
+            </p>
+        </div>
+        <div class="mt-2" style="background: #f8fafc; border-radius: 12px; padding: 12px 16px;">
+            <p class="text-muted small mb-0">💡 油尖旺逛完基本需要一整天。如果感兴趣，也可以去黄大仙寺庙看看。</p>
+        </div>
+    </div>
+
+    <!-- ===== 小贴士 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="background: #f8f4ee; border: 1px solid #f0e6d8;">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-lightbulb text-ubcc me-2"></i>出行小贴士
+        </h5>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <p class="fw-bold text-ubcc mb-1">🚇 交通</p>
+                <p class="text-secondary small" style="line-height: 1.8;">大部分小巴和巴士只接受八达通，记得提前充好值。</p>
+            </div>
+            <div class="col-md-4">
+                <p class="fw-bold text-ubcc mb-1">🌦️ 天气</p>
+                <p class="text-secondary small" style="line-height: 1.8;">如果下雨或太热，建议选择室内为主的路线（如西九龙、油尖旺）。</p>
+            </div>
+            <div class="col-md-4">
+                <p class="fw-bold text-ubcc mb-1">👟 装备</p>
+                <p class="text-secondary small" style="line-height: 1.8;">穿舒适的鞋子，带防晒、雨伞、充电宝 —— 拍照会消耗很多电量 📸</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 安全提醒 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="border-left: 6px solid var(--ubcc-orange);">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-shield-alt text-ubcc me-2"></i>安全第一
+        </h5>
+        <ul style="line-height: 2.2; color: #555; padding-left: 20px; margin-bottom: 0;">
+            <li>全组必须集体行动，不要单独离队</li>
+            <li>选择路线时注意天气和体力情况</li>
+            <li>如遇突发情况，立刻联系组家长</li>
+            <li>17:30 前务必回到学校参加仲夏夜聊</li>
+        </ul>
+    </div>
+
+    <!-- ===== 底部导航 ===== -->
+    <div class="text-center mt-4">
+        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc">
+            <i class="fas fa-arrow-left me-2"></i>返回日程表
+        </a>
+    </div>
+</div>
+
+{% endblock %}
