@@ -20,19 +20,20 @@ def camp():
     activities = Activity.query.order_by(Activity.day, period_order).all()
     days = {}
     for act in activities:
-        # 根据活动标题决定跳转链接
         if 'O-Campus' in act.title:
             link = url_for('main.o_campus')
-        elif 'O-Hong' in act.title or '香港游' in act.title or 'O-HK' in act.title:
+        elif 'O-Hong' in act.title or '香港游' in act.title:
             link = url_for('main.o_hk')
-        elif '西环' in act.title or 'O-西环' in act.title:
+        elif '西环' in act.title:
             link = url_for('main.o_saiwan')
+        elif '开营' in act.title or '破冰' in act.title or 'Case培训' in act.title:
+            link = url_for('main.opening')
+        elif '太平山' in act.title or '维港' in act.title:
+            link = url_for('main.night_tour')
         else:
             link = url_for('main.activity_detail', id=act.id)
-        # 给每个活动添加 link 属性
         act.link = link
         days.setdefault(act.day, []).append(act)
-    return render_template('camp.html', days=days)
 
 @bp.route('/activity/<int:id>')
 def activity_detail(id):
@@ -51,6 +52,14 @@ def about():
 @bp.route('/case-materials')
 def case_materials():
     return render_template('case_materials.html')
+
+@bp.route('/opening')
+def opening():
+    return render_template('opening.html')
+
+@bp.route('/night-tour')
+def night_tour():
+    return render_template('night_tour.html')
 
 @bp.route('/o-campus')
 def o_campus():

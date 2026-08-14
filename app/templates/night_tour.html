@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+    <!-- ===== 英雄区 ===== -->
+    <div class="text-center mb-5">
+        <div style="font-size: 4rem; line-height: 1.2;">🌃</div>
+        <h1 class="display-3 fw-bold" style="color: var(--ubcc-dark);">
+            夜行太平山 <span style="color: var(--ubcc-orange);">&</span> 维港夜游
+        </h1>
+        <p class="fs-4 text-secondary mt-2">8月26日 晚上 · 城市夜空</p>
+        <div class="d-flex justify-content-center gap-3 mt-3 flex-wrap">
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">⛰️ 山顶夜景</span>
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">🌊 维港星光</span>
+            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 8px 20px; font-size: 0.95rem;">📸 夏夜记忆</span>
+        </div>
+    </div>
+
+    <!-- ===== 夜行太平山 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="border-left: 6px solid var(--ubcc-orange);">
+        <h3 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-mountain text-ubcc me-2"></i>夜行太平山 · 俯瞰这座城
+        </h3>
+        <p style="color: #444; line-height: 1.9; font-size: 1.05rem;">
+            夜幕降临，我们出发上山。太平山顶的夜景，是香港最经典的画面之一。和队友一起，站在山顶俯瞰维港两岸的灯火，那种感觉，比任何照片都震撼。
+        </p>
+        <div class="row g-3 mt-2">
+            <div class="col-md-6">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 14px 18px;">
+                    <p class="fw-bold text-ubcc mb-1">🚶 怎么上山？</p>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 0;">
+                        小组内可以商量决定：<br>
+                        <strong>爬山</strong> —— 挑战体力，感受一步一步登顶的成就感<br>
+                        <strong>坐缆车</strong> —— 轻松上山，专注享受夜景
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div style="background: #f8fafc; border-radius: 12px; padding: 14px 18px;">
+                    <p class="fw-bold text-ubcc mb-1">📸 山顶做什么？</p>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 0;">
+                        在山顶约 500m 处有一片空地，适合休息、拍合照、吹吹风。<br>
+                        <span class="text-muted">💡 运气好的话，还能遇到一些“本地居民”——野猪🐗，远远看看就好。</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="text-muted small mt-3 mb-0">🎒 记得带上八达通（交通费不包含在 OCamp 费用里），如果人多也可以选择打车。</p>
+    </div>
+
+    <!-- ===== 维港夜游 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="background: #fcf9f2; border: 1px solid #f0e6d8;">
+        <h3 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-water text-ubcc me-2"></i>维港夜游 · 星光下的漫步
+        </h3>
+        <p style="color: #444; line-height: 1.9; font-size: 1.05rem;">
+            从山顶下来，尖沙咀海滨的夜景是另一个维度的震撼。星光大道、钟楼、天星小轮——维港的夜晚，有一种说不出的浪漫。
+        </p>
+        <div style="background: #fff; border-radius: 16px; padding: 16px 20px; margin-top: 10px;">
+            <p style="color: #555; line-height: 1.9; margin-bottom: 0;">
+                🍜 晚餐时间！各组可以根据自己的节奏，在尖沙咀附近自由安排晚餐。从茶餐厅到日式拉面，从街头小吃到海景餐厅——选择很多，和队友一起探索吧。
+            </p>
+        </div>
+        <p class="text-muted small mt-2 mb-0">💡 八月底是旅游旺季，维港附近人多，记得跟紧组家长和OC，不要掉队。</p>
+    </div>
+
+    <!-- ===== 小贴士 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="background: #f8f4ee; border: 1px solid #f0e6d8;">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-lightbulb text-ubcc me-2"></i>出行小贴士
+        </h5>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <p class="fw-bold text-ubcc mb-1">🚇 交通</p>
+                <p class="text-secondary small" style="line-height: 1.8;">如果坐巴士人多，可以考虑打车。组家长会协助安排。</p>
+            </div>
+            <div class="col-md-4">
+                <p class="fw-bold text-ubcc mb-1">📱 通讯</p>
+                <p class="text-secondary small" style="line-height: 1.8;">确保手机有电、有网络。组家长会提前确认好维港的出站口，避免走散。</p>
+            </div>
+            <div class="col-md-4">
+                <p class="fw-bold text-ubcc mb-1">👟 装备</p>
+                <p class="text-secondary small" style="line-height: 1.8;">穿舒适的鞋子，带上充电宝、外套（山顶风大），还有你的相机。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 安全提醒 ===== -->
+    <div class="card card-ubcc p-4 mb-4" style="border-left: 6px solid var(--ubcc-orange); background: #fffcf5;">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-shield-alt text-ubcc me-2"></i>安全第一
+        </h5>
+        <ul style="line-height: 2.2; color: #555; padding-left: 20px; margin-bottom: 0;">
+            <li>全组集体行动，不要单独离队</li>
+            <li>爬山时注意脚下，走有灯光的路线</li>
+            <li>遇到野猪保持距离，不要投喂或靠近</li>
+            <li>如遇任何突发情况，立刻联系组家长</li>
+        </ul>
+    </div>
+
+    <!-- ===== 底部导航 ===== -->
+    <div class="text-center mt-4">
+        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc">
+            <i class="fas fa-arrow-left me-2"></i>返回日程表
+        </a>
+    </div>
+</div>
+
+{% endblock %}
