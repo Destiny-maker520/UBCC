@@ -10,14 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* ---------- 全局：中文强制优先 ---------- */
+        /* ---------- 全局：楷体优先 ---------- */
         * {
-            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-        }
-
-        /* 英文标题和数字可以使用 Inter，但中文内容不继承 */
-        h1, h2, h3, h4, h5, h6, .navbar-brand, .display-* {
-            font-family: 'Inter', "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif !important;
+            font-family: "STKaiti", "华文楷体", "KaiTi", "楷体", "PingFang SC", "Microsoft YaHei", serif !important;
         }
 
         body {
@@ -25,14 +20,12 @@
             padding-top: 76px;
             font-weight: 400;
             line-height: 1.8;
+            font-size: 16px;
         }
 
-        /* 强制所有中文段落使用系统字体 */
-        p, li, .text-secondary, .card-text, .lead, .nav-link, .dropdown-item, .btn, .footer-ubcc, .badge, .card-title, .fs-5, .fs-6, small, .text-muted {
-            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", -apple-system, BlinkMacSystemFont, sans-serif !important;
-            font-weight: 400;
-            letter-spacing: 0.03em;
-            word-spacing: 0.05em;
+        /* 英文和数字使用系统字体，避免楷体显示英文太怪 */
+        .navbar-brand, h1, h2, h3, h4, h5, h6, .display-* {
+            font-family: "STKaiti", "华文楷体", "KaiTi", "楷体", "PingFang SC", "Microsoft YaHei", serif !important;
         }
 
         /* ---------- 颜色变量 ---------- */
@@ -53,7 +46,7 @@
             font-weight: 700;
             font-size: 1.6rem;
             color: #fff !important;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.5px;
         }
         .navbar-ubcc .navbar-brand span {
             color: var(--ubcc-orange);
@@ -61,7 +54,7 @@
         .navbar-ubcc .nav-link {
             color: rgba(255,255,255,0.8) !important;
             font-weight: 500;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             padding: 0.5rem 0.8rem !important;
             transition: 0.3s;
         }
@@ -75,7 +68,6 @@
             flex-wrap: nowrap;
         }
 
-        /* 下拉菜单 */
         .navbar-ubcc .dropdown-menu {
             background: #fff;
             border: none;
@@ -182,7 +174,6 @@
             transform: translateY(-3px);
         }
 
-        /* 移动端适配 */
         @media (max-width: 992px) {
             .navbar-ubcc .navbar-nav {
                 margin-top: 10px;
@@ -217,16 +208,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+                <!-- 关于我们 -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('main.about') }}">
                         <i class="fas fa-info-circle me-1"></i>关于我们
                     </a>
                 </li>
+
+                <!-- 迎新营日程 -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('main.camp') }}">
                         <i class="fas fa-calendar-alt me-1"></i>迎新营日程
                     </a>
                 </li>
+
+                <!-- 活动下拉菜单 -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEvents" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-flag me-1"></i>活动
@@ -237,11 +233,47 @@
                         <li><a class="dropdown-item" href="{{ url_for('main.o_saiwan') }}"><i class="fas fa-umbrella-beach"></i>O-西环</a></li>
                     </ul>
                 </li>
+
+                <!-- Case 资料库 -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('main.case_materials') }}">
                         <i class="fas fa-file-alt me-1"></i>Case 资料库
                     </a>
                 </li>
+
+                <!-- ===== 以下为暂时隐藏的模块（保留注释，后续可恢复） ===== -->
+                {#
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTeam" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-users me-1"></i>成员
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-tie"></i>执行委员会</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-graduate"></i>核心成员</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-plus"></i>加入我们</a></li>
+                    </ul>
+                </li>
+                #}
+
+                {#
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownResearch" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-flask me-1"></i>研究
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-file-alt"></i>案例成果</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-book"></i>行业报告</a></li>
+                    </ul>
+                </li>
+                #}
+
+                {#
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-pen-fancy me-1"></i>招募</a>
+                </li>
+                #}
+
+                <!-- 联系 -->
                 <li class="nav-item">
                     <a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i>联系</a>
                 </li>
