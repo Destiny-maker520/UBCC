@@ -7,53 +7,58 @@
         <h1 class="display-4 fw-bold" style="color: var(--ubcc-dark);">
             <span class="text-ubcc">关于</span>我们
         </h1>
+        <!-- 语言切换按钮 -->
         <div class="d-flex justify-content-center gap-3 mt-2">
-            <span class="badge" style="background: var(--ubcc-orange); color: #fff; padding: 6px 18px;">中文</span>
-            <span class="badge" style="background: #2C3E50; color: #fff; padding: 6px 18px;">English</span>
+            <button class="btn btn-ubcc" id="btn-zh" onclick="switchLanguage('zh')" style="border-radius: 50px; padding: 6px 28px; font-weight: 600;">
+                🇨中文
+            </button>
+            <button class="btn btn-outline-ubcc" id="btn-en" onclick="switchLanguage('en')" style="border-radius: 50px; padding: 6px 28px; font-weight: 600; border: 2px solid var(--ubcc-orange); color: var(--ubcc-orange); background: transparent;">
+                🇬English
+            </button>
         </div>
         <hr class="w-25 mx-auto" style="border-color: var(--ubcc-orange); opacity: 0.4;">
     </div>
 
-    <!-- ===== 关于我们 ===== -->
-    <div class="card card-ubcc p-4 mb-4" style="border-left: 6px solid var(--ubcc-orange);">
-        <h4 class="fw-bold" style="color: var(--ubcc-dark);">
-            <i class="fas fa-flag text-ubcc me-2"></i>关于我们
-        </h4>
-        <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
-            大学商业咨询学会（UBCC）成立于 2009 年，是在香港政府注册的非营利性组织。自成立以来，UBCC 始终铭记创始人洪先生（David Hong）所强调的宗旨：<strong>“做靠谱的事，成为靠谱的人”</strong>。
-        </p>
+    <!-- ===== 中文内容 ===== -->
+    <div id="content-zh" class="language-content">
+        <div class="card card-ubcc p-4 mb-4" style="border-left: 6px solid var(--ubcc-orange);">
+            <h4 class="fw-bold" style="color: var(--ubcc-dark);">
+                <i class="fas fa-flag text-ubcc me-2"></i>关于我们
+            </h4>
+            <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
+                大学商业咨询学会（UBCC）成立于 2009 年，是在香港政府注册的非营利性组织。自成立以来，UBCC 始终铭记创始人洪先生（David Hong）所强调的宗旨：<strong>“做靠谱的事，成为靠谱的人”</strong>。
+            </p>
+        </div>
+
+        <div class="card card-ubcc p-4 mb-4" style="background: #fcf9f2; border: 1px solid #f0e6d8;">
+            <h4 class="fw-bold" style="color: var(--ubcc-dark);">
+                <i class="fas fa-bullseye text-ubcc me-2"></i>我们的目标
+            </h4>
+            <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
+                我们一直致力于为学生提供<strong>实践专业知识</strong>和<strong>拓展咨询视野</strong>的平台。UBCC 为会员提供宏观经济、企业战略、金融市场等方面的专业培训，以及深入的分析和研究，<strong>与时俱进</strong>，帮助会员建立和巩固坚实的比较优势。
+            </p>
+        </div>
     </div>
 
-    <!-- ===== 我们的目标 ===== -->
-    <div class="card card-ubcc p-4 mb-4" style="background: #fcf9f2; border: 1px solid #f0e6d8;">
-        <h4 class="fw-bold" style="color: var(--ubcc-dark);">
-            <i class="fas fa-bullseye text-ubcc me-2"></i>我们的目标
-        </h4>
-        <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
-            我们一直致力于为学生提供<strong>实践专业知识</strong>和<strong>拓展咨询视野</strong>的平台。UBCC 为会员提供宏观经济、企业战略、金融市场等方面的专业培训，以及深入的分析和研究，<strong>与时俱进</strong>，帮助会员建立和巩固坚实的比较优势。
-        </p>
-    </div>
+    <!-- ===== 英文内容 ===== -->
+    <div id="content-en" class="language-content" style="display: none;">
+        <div class="card card-ubcc p-4 mb-4" style="border-left: 6px solid var(--ubcc-orange);">
+            <h4 class="fw-bold" style="color: var(--ubcc-dark);">
+                <i class="fas fa-flag text-ubcc me-2"></i>About Us
+            </h4>
+            <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
+                Founded in 2009, the <strong>University Business Consulting Club (UBCC)</strong> is a non-profit organization registered with the Hong Kong Government. Since its establishment, UBCC has always kept in mind the principle of <strong>"Doing reliable things, becoming reliable people"</strong> (as emphasized by the founder Mr. David Hong).
+            </p>
+        </div>
 
-    <hr class="my-4" style="border-color: var(--ubcc-orange); opacity: 0.2;">
-
-    <!-- ===== 英文部分 ===== -->
-    <div class="card card-ubcc p-4 mb-4" style="border-left: 6px solid var(--ubcc-orange);">
-        <h4 class="fw-bold" style="color: var(--ubcc-dark);">
-            <i class="fas fa-flag text-ubcc me-2"></i>About Us
-        </h4>
-        <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
-            Founded in 2009, the <strong>University Business Consulting Club (UBCC)</strong> is a non-profit organization registered with the Hong Kong Government. Since its establishment, UBCC has always kept in mind the principle of <strong>"Doing reliable things, becoming reliable people"</strong> (as emphasized by the founder Mr. David Hong).
-        </p>
-    </div>
-
-    <!-- ===== Our Aim ===== -->
-    <div class="card card-ubcc p-4 mb-4" style="background: #fcf9f2; border: 1px solid #f0e6d8;">
-        <h4 class="fw-bold" style="color: var(--ubcc-dark);">
-            <i class="fas fa-bullseye text-ubcc me-2"></i>Our Aim
-        </h4>
-        <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
-            We have always been committed to providing a platform for students to <strong>practice professional knowledge</strong> and <strong>expand consulting vision</strong>. UBCC offers our members specialized <strong>training</strong> in macroeconomics, corporate strategies and financial markets, in-depth analysis and research, <strong>keeping pace with the development of the times</strong>, as well as establishing and cultivating a solid comparative advantage.
-        </p>
+        <div class="card card-ubcc p-4 mb-4" style="background: #fcf9f2; border: 1px solid #f0e6d8;">
+            <h4 class="fw-bold" style="color: var(--ubcc-dark);">
+                <i class="fas fa-bullseye text-ubcc me-2"></i>Our Aim
+            </h4>
+            <p class="text-secondary" style="font-size: 1.05rem; line-height: 1.9;">
+                We have always been committed to providing a platform for students to <strong>practice professional knowledge</strong> and <strong>expand consulting vision</strong>. UBCC offers our members specialized <strong>training</strong> in macroeconomics, corporate strategies and financial markets, in-depth analysis and research, <strong>keeping pace with the development of the times</strong>, as well as establishing and cultivating a solid comparative advantage.
+            </p>
+        </div>
     </div>
 
     <!-- ===== 返回按钮 ===== -->
@@ -63,5 +68,44 @@
         </a>
     </div>
 </div>
+
+<!-- ===== 语言切换 JavaScript ===== -->
+<script>
+    function switchLanguage(lang) {
+        // 隐藏所有内容
+        document.querySelectorAll('.language-content').forEach(function(el) {
+            el.style.display = 'none';
+        });
+
+        // 显示选中的语言
+        if (lang === 'zh') {
+            document.getElementById('content-zh').style.display = 'block';
+            document.getElementById('btn-zh').className = 'btn btn-ubcc';
+            document.getElementById('btn-en').className = 'btn btn-outline-ubcc';
+        } else {
+            document.getElementById('content-en').style.display = 'block';
+            document.getElementById('btn-en').className = 'btn btn-ubcc';
+            document.getElementById('btn-zh').className = 'btn btn-outline-ubcc';
+        }
+    }
+
+    // 默认显示中文
+    document.addEventListener('DOMContentLoaded', function() {
+        switchLanguage('zh');
+    });
+</script>
+
+<style>
+    .btn-outline-ubcc {
+        border: 2px solid var(--ubcc-orange);
+        background: transparent;
+        color: var(--ubcc-orange);
+        transition: 0.3s;
+    }
+    .btn-outline-ubcc:hover {
+        background: var(--ubcc-orange);
+        color: #fff;
+    }
+</style>
 
 {% endblock %}
