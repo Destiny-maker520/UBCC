@@ -37,6 +37,8 @@ def camp():
             link = url_for('main.opening')
         elif '太平山' in title or '维港' in title:
             link = url_for('main.night_tour')
+        elif '小组作业' in title or 'Mini Case' in title:
+            link = url_for('main.case_materials')
         else:
             link = url_for('main.activity_detail', id=act.id)
         act.link = link
