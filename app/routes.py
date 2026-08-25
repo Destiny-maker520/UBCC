@@ -9,47 +9,6 @@ bp = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
-@bp.route('/summer-chat')
-def summer_chat():
-    return render_template('summer_chat.html')
-
-@bp.route('/camp')
-def camp():
-    from sqlalchemy import case
-    from flask import url_for
-
-    # 自定义时段排序
-    period_order = case(
-        (Activity.period == 'Morning', 1),
-        (Activity.period == 'Afternoon', 2),
-        (Activity.period == 'Evening', 3),
-        else_=4
-    )
-    activities = Activity.query.order_by(Activity.day, period_order).all()
-    days = {}
-    for act in activities:
-        # 根据活动标题决定跳转链接
-        title = act.title or ''
-        if 'O-Campus' in title:
-            link = url_for('main.o_campus')
-        elif 'O-Hong' in title or '香港游' in title or 'O-HK' in title:
-            link = url_for('main.o_hk')
-        elif '西环' in title or 'O-西环' in title:
-            link = url_for('main.o_saiwan')
-        elif '开营' in title or '破冰' in title or 'Case培训' in title:
-            link = url_for('main.opening')
-        elif '太平山' in title or '维港' in title:
-            link = url_for('main.night_tour')
-        elif '小组作业' in title or 'Mini Case' in title:
-            link = url_for('main.case_materials')
-        elif '仲夏夜聊' in title or 'Career Talk' in title:
-            link = url_for('mian.summer_chat')
-        else:
-            link = url_for('main.activity_detail', id=act.id)
-        act.link = link
-        days.setdefault(act.day, []).append(act)
-    return render_template('camp.html', days=days)
-
 @bp.route('/activity/<int:id>')
 def activity_detail(id):
     act = Activity.query.get_or_404(id)
@@ -87,6 +46,47 @@ def o_hk():
 @bp.route('/o-saiwan')
 def o_saiwan():
     return render_template('o_saiwan.html')
+
+@bp.route('/summer-chat')
+def summer_chat():
+    return render_template('summer_chat.html')
+
+@bp.route('/camp')
+def camp():
+    from sqlalchemy import case
+    from flask import url_for
+
+    # 自定义时段排序
+    period_order = case(
+        (Activity.period == 'Morning', 1),
+        (Activity.period == 'Afternoon', 2),
+        (Activity.period == 'Evening', 3),
+        else_=4
+    )
+    activities = Activity.query.order_by(Activity.day, period_order).all()
+    days = {}
+    for act in activities:
+        # 根据活动标题决定跳转链接
+        title = act.title or ''
+        if 'O-Campus' in title:
+            link = url_for('main.o_campus')
+        elif 'O-Hong' in title or '香港游' in title or 'O-HK' in title:
+            link = url_for('main.o_hk')
+        elif '西环' in title or 'O-西环' in title:
+            link = url_for('main.o_saiwan')
+        elif '开营' in title or '破冰' in title or 'Case培训' in title:
+            link = url_for('main.opening')
+        elif '太平山' in title or '维港' in title:
+            link = url_for('main.night_tour')
+        elif '小组作业' in title or 'Mini Case' in title:
+            link = url_for('main.case_materials')
+        elif '仲夏夜聊' in title or 'Career Talk' in title:
+            link = url_for('main.summer_chat')
+        else:
+            link = url_for('main.activity_detail', id=act.id)
+        act.link = link
+        days.setdefault(act.day, []).append(act)
+    return render_template('camp.html', days=days)
 
 @bp.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
