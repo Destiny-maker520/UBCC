@@ -9,6 +9,9 @@ bp = Blueprint('main', __name__)
 def index():
     return render_template('index.html')
 
+@bp.route('/summer-chat')
+def summer_chat():
+    return render_template('summer_chat.html')
 
 @bp.route('/camp')
 def camp():
@@ -84,10 +87,6 @@ def o_hk():
 @bp.route('/o-saiwan')
 def o_saiwan():
     return render_template('o_saiwan.html')
-
-@bp.route('/summer-chat')
-def summer_chat():
-    return render_template('summer_chat.html')
 
 @bp.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
