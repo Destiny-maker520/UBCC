@@ -94,6 +94,43 @@ def camp():
         days.setdefault(act.day, []).append(act)
     return render_template('camp.html', days=days)
 
+# 登录页面
+@bp.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        group = request.form.get('group')
+        captain = request.form.get('captain')
+
+        # 验证逻辑
+        valid_groups = ['黑芝麻豆花星冰乐', '牛奶红豆冰', '杨枝甘露', '咖喱鱼蛋', '鸡蛋仔', '刘译楠', '冰火菠萝油', 'PIC']
+        valid_captains = {
+            '黑芝麻豆花星冰乐': '朱茜媛',
+            '牛奶红豆冰': '杨舒祁',
+            '杨枝甘露': '魏舒娴',
+            '咖喱鱼蛋': '惠梓萌',
+            '鸡蛋仔': '刘昕然',
+            '凤梨包': '刘译楠',
+            '冰火菠萝油': '王安诺',
+            'PIC': 'UBCC2026'
+        }
+
+        if group in valid_groups and valid_captains.get(group) == captain:
+            session['logged_in'] = True
+            session['group'] = group
+            session['captain'] = captain
+            return redirect(url_for('main.index'))
+        else:
+            error = '组别或队长姓名错误，请重试。'
+            return render_template('login.html', error=error)
+
+    return render_template('login.html')
+
+# 登出
+@bp.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('main.index'))
+
 @bp.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
     error = None

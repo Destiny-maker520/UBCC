@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5" style="max-width: 480px;">
+    <div class="text-center mb-4">
+        <div style="font-size: 3rem; line-height: 1.2;">🔑</div>
+        <h1 class="display-5 fw-bold" style="color: var(--ubcc-dark);">
+            登录 <span style="color: var(--ubcc-orange);">UBCC</span>
+        </h1>
+        <p class="text-secondary">请输入你的组别及队长姓名</p>
+        <hr class="w-25 mx-auto" style="border-color: var(--ubcc-orange); opacity: 0.4;">
+    </div>
+
+    <div class="card border-0 rounded-4 p-4" style="background: #ffffff; box-shadow: 0 8px 30px rgba(0,0,0,0.06);">
+        {% if error %}
+        <div class="alert alert-danger rounded-3" style="background: #fee2e2; border: none; color: #b91c1c;">
+            <i class="fas fa-exclamation-circle me-2"></i>{{ error }}
+        </div>
+        {% endif %}
+
+        <form method="POST">
+            <div class="mb-3">
+                <label class="form-label fw-bold" style="color: var(--ubcc-dark);">组别</label>
+                <input type="text" class="form-control" name="group" placeholder="请输入你的组别名称" required style="border-radius: 12px; padding: 12px 16px; border: 2px solid #e8ecf1;">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" style="color: var(--ubcc-dark);">队长姓名</label>
+                <input type="text" class="form-control" name="captain" placeholder="请输入队长姓名" required style="border-radius: 12px; padding: 12px 16px; border: 2px solid #e8ecf1;">
+            </div>
+
+            <button type="submit" class="btn btn-ubcc w-100 mt-2" style="padding: 12px;">
+                <i class="fas fa-arrow-right-to-bracket me-2"></i>登录
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
