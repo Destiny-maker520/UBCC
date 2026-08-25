@@ -51,6 +51,10 @@ def o_saiwan():
 def summer_chat():
     return render_template('summer_chat.html')
 
+@bp.route('/game-night')
+def game_night():
+    return render_template('game_night.html')
+
 @bp.route('/camp')
 def camp():
     from sqlalchemy import case
@@ -82,6 +86,8 @@ def camp():
             link = url_for('main.case_materials')
         elif '仲夏夜聊' in title or 'Career Talk' in title:
             link = url_for('main.summer_chat')
+        elif '跨组娱乐夜' in title or 'Game Night' in title:
+            link = url_for('main.game_night')
         else:
             link = url_for('main.activity_detail', id=act.id)
         act.link = link
