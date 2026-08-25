@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+    <!-- 页面头部 -->
+    <div class="text-center mb-5">
+        <div style="font-size: 3.5rem; line-height: 1.2; color: var(--ubcc-dark);">🌙</div>
+        <h1 class="display-4 fw-bold" style="color: var(--ubcc-dark);">
+            仲夏夜聊 <span style="color: var(--ubcc-orange);">2.0</span>
+        </h1>
+        <p class="fs-5 text-secondary mt-2">2026年8月28日 18:30 – 21:30 · 行业嘉宾分享与交流</p>
+        <hr class="w-25 mx-auto" style="border-color: var(--ubcc-orange); opacity: 0.4;">
+        <p class="text-muted" style="max-width: 700px; margin: 0 auto; font-size: 1rem;">
+            <i class="fas fa-info-circle text-ubcc me-1"></i>
+            本次分享面向全体 UBCC 2026 Ocamp 参与者。欢迎带着问题来，与嘉宾面对面交流。
+        </p>
+    </div>
+
+    <!-- ===== 活动概览 ===== -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card border-0 rounded-4 p-4 text-center h-100" style="background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border-top: 4px solid var(--ubcc-orange);">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎤</div>
+                <h6 class="fw-bold" style="color: var(--ubcc-dark);">嘉宾分享</h6>
+                <p class="text-secondary small" style="line-height: 1.6; margin-bottom: 0;">两位行业嘉宾 + 学长姐</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 rounded-4 p-4 text-center h-100" style="background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border-top: 4px solid var(--ubcc-orange);">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+                <h6 class="fw-bold" style="color: var(--ubcc-dark);">互动问答</h6>
+                <p class="text-secondary small" style="line-height: 1.6; margin-bottom: 0;">提前提交问题，现场交流</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 rounded-4 p-4 text-center h-100" style="background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.04); border-top: 4px solid var(--ubcc-orange);">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
+                <h6 class="fw-bold" style="color: var(--ubcc-dark);">自由交流</h6>
+                <p class="text-secondary small" style="line-height: 1.6; margin-bottom: 0;">与嘉宾和学长姐面对面沟通</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 嘉宾介绍（正式学术风格） ===== -->
+    <h3 class="fw-bold mb-4" style="color: var(--ubcc-dark); border-bottom: 2px solid var(--ubcc-orange); padding-bottom: 10px;">
+        <i class="fas fa-user-tie text-ubcc me-2"></i>嘉宾介绍
+    </h3>
+
+    <div class="row g-4 mb-5">
+        <!-- 嘉宾一 -->
+        <div class="col-md-6">
+            <div class="card border-0 rounded-4 p-4 h-100" style="background: #fcf9f2; border-left: 4px solid var(--ubcc-orange);">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 48px; height: 48px; background: var(--ubcc-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.1rem;">1</div>
+                    <h5 class="fw-bold mb-0" style="color: var(--ubcc-dark);">Morgan Stanley 十年 · 科创企业 CFO</h5>
+                </div>
+                <ul style="list-style-type: none; padding-left: 0; line-height: 1.8; color: #555; font-size: 0.95rem;">
+                    <li><i class="fas fa-briefcase text-ubcc me-2" style="width: 16px;"></i>曾任职于 Morgan Stanley，拥有 10 年投资银行经验</li>
+                    <li><i class="fas fa-arrow-right text-ubcc me-2" style="width: 16px;"></i>现担任科创企业 <strong>首席财务官（CFO）</strong></li>
+                    <li><i class="fas fa-arrow-right text-ubcc me-2" style="width: 16px;"></i>擅长：企业财务战略、资本市场运作、IPO 筹备</li>
+                </ul>
+                <p class="text-muted small mt-2 mb-0" style="font-style: italic;">“从顶级投行到科创企业，用财务视角驱动企业增长”</p>
+            </div>
+        </div>
+
+        <!-- 嘉宾二 -->
+        <div class="col-md-6">
+            <div class="card border-0 rounded-4 p-4 h-100" style="background: #fcf9f2; border-left: 4px solid var(--ubcc-orange);">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div style="width: 48px; height: 48px; background: var(--ubcc-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.1rem;">2</div>
+                    <h5 class="fw-bold mb-0" style="color: var(--ubcc-dark);">港股上市公司 · 私募基金总监</h5>
+                </div>
+                <ul style="list-style-type: none; padding-left: 0; line-height: 1.8; color: #555; font-size: 0.95rem;">
+                    <li><i class="fas fa-briefcase text-ubcc me-2" style="width: 16px;"></i>港股上市公司 <strong>私募基金总监</strong></li>
+                    <li><i class="fas fa-arrow-right text-ubcc me-2" style="width: 16px;"></i>曾任投融资部 <strong>董事总经理（MD）</strong></li>
+                    <li><i class="fas fa-arrow-right text-ubcc me-2" style="width: 16px;"></i>主导融资规模超过 <strong>20 亿元人民币</strong></li>
+                </ul>
+                <p class="text-muted small mt-2 mb-0" style="font-style: italic;">“用资本力量推动企业战略升级”</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 校友分享 ===== -->
+    <div class="card border-0 rounded-4 p-4 mb-5" style="background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-graduation-cap text-ubcc me-2"></i>校友分享
+        </h5>
+        <p style="color: #555; line-height: 1.8; font-size: 1rem;">
+            除了两位行业嘉宾，本次仲夏夜聊还邀请了 UBCC 往届学长姐回归分享。他们曾在咨询、金融、科技等领域积累了丰富的经验，将结合自身经历，为 Ocamp 参与者提供职业发展建议与行业洞察。
+        </p>
+        <p class="text-muted small mb-0">
+            <i class="fas fa-users me-1"></i> 学长姐分享主题涵盖：咨询行业入门、金融求职路径、商科生如何进入科技行业等。
+        </p>
+    </div>
+
+    <!-- ===== 王宏伟案例：分享参考（精简呈现） ===== -->
+    <div class="card border-0 rounded-4 p-4 mb-5" style="background: #fcf9f2; border: 1px solid #f0e6d8;">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-lightbulb text-ubcc me-2"></i>分享参考 · 校友案例
+        </h5>
+        <p style="color: #555; line-height: 1.8; font-size: 1rem;">
+            本次仲夏夜聊也将分享校友的职业发展案例。以 <strong>王宏伟</strong>（清华－康奈尔双学位金融MBA）为例：
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0;">
+            <span class="badge" style="background: #2C3E50; color: #fff; padding: 6px 16px; border-radius: 50px; font-weight: 400;">曾任建银国际直接投资部副总裁</span>
+            <span class="badge" style="background: #2C3E50; color: #fff; padding: 6px 16px; border-radius: 50px; font-weight: 400;">第四范式投融资总监</span>
+            <span class="badge" style="background: #2C3E50; color: #fff; padding: 6px 16px; border-radius: 50px; font-weight: 400;">港大法律博士（JD）</span>
+            <span class="badge" style="background: #2C3E50; color: #fff; padding: 6px 16px; border-radius: 50px; font-weight: 400;">加州大学伯克利分校 LL.M.</span>
+            <span class="badge" style="background: #2C3E50; color: #fff; padding: 6px 16px; border-radius: 50px; font-weight: 400;">主导 C+ 轮融资，估值约 20 亿美元</span>
+        </div>
+        <p class="text-muted small mb-0">
+            <i class="fas fa-link me-1"></i> 案例来源：清华五道口金融MBA教育中心 · 第四范式
+        </p>
+    </div>
+
+    <!-- ===== 互动环节 ===== -->
+    <div class="card border-0 rounded-4 p-4 mb-5" style="background: linear-gradient(135deg, #fff8ee 0%, #ffffff 100%); border: 2px dashed var(--ubcc-orange);">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-question-circle text-ubcc me-2"></i>我想问嘉宾
+        </h5>
+        <p style="color: #555; line-height: 1.8; font-size: 1rem;">
+            如果你有想问嘉宾的问题，欢迎提前提交！我们将整理后交给嘉宾，在互动环节优先回答。
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+            <span class="badge" style="background: #e8ecf1; color: #555; padding: 8px 18px; border-radius: 50px; font-weight: 400;">📌 投行职业路径</span>
+            <span class="badge" style="background: #e8ecf1; color: #555; padding: 8px 18px; border-radius: 50px; font-weight: 400;">📌 从投行到企业 CFO</span>
+            <span class="badge" style="background: #e8ecf1; color: #555; padding: 8px 18px; border-radius: 50px; font-weight: 400;">📌 私募基金与融资实战</span>
+            <span class="badge" style="background: #e8ecf1; color: #555; padding: 8px 18px; border-radius: 50px; font-weight: 400;">📌 商科生的跨领域发展</span>
+        </div>
+        <p class="text-muted small mt-3 mb-0">
+            <i class="fas fa-edit me-1"></i> 问卷链接将在活动前发布在 Ocamp 新生群中，敬请关注。
+        </p>
+    </div>
+
+    <!-- ===== 活动流程 ===== -->
+    <div class="card border-0 rounded-4 p-4 mb-5" style="background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.04);">
+        <h5 class="fw-bold" style="color: var(--ubcc-dark);">
+            <i class="fas fa-clock text-ubcc me-2"></i>活动流程
+        </h5>
+        <div style="position: relative; padding-left: 20px; border-left: 3px solid var(--ubcc-orange);">
+            <div class="mb-3">
+                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">18:30</span>
+                <span style="color: #444;">开场介绍 · UBCC 与仲夏夜聊</span>
+            </div>
+            <div class="mb-3">
+                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">18:40</span>
+                <span style="color: #444;">嘉宾分享（一）：Morgan Stanley 十年 · 科创企业 CFO</span>
+            </div>
+            <div class="mb-3">
+                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">19:20</span>
+                <span style="color: #444;">嘉宾分享（二）：港股上市公司 · 私募基金总监</span>
+            </div>
+            <div class="mb-3">
+                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">20:00</span>
+                <span style="color: #444;">学长姐分享 · 职业发展经验谈</span>
+            </div>
+            <div class="mb-3">
+                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">20:30</span>
+                <span style="color: #444;">互动问答 · 自由交流</span>
+            </div>
+            <div>
+                <span class="fw-bold text-ubcc" style="display:inline-block;width:80px;">21:30</span>
+                <span style="color: #444;"><strong>活动结束</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 底部导航 ===== -->
+    <div class="text-center mt-4">
+        <a href="{{ url_for('main.camp') }}" class="btn btn-ubcc">
+            <i class="fas fa-arrow-left me-2"></i>返回日程表
+        </a>
+        <a href="{{ url_for('main.index') }}" class="btn btn-outline-ubcc ms-2" style="border: 2px solid var(--ubcc-orange); color: var(--ubcc-orange); border-radius: 50px; padding: 8px 24px; font-weight: 600; text-decoration: none; transition: 0.3s;">
+            <i class="fas fa-home me-2"></i>返回首页
+        </a>
+    </div>
+</div>
+
+{% endblock %}

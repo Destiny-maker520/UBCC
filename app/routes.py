@@ -39,6 +39,8 @@ def camp():
             link = url_for('main.night_tour')
         elif '小组作业' in title or 'Mini Case' in title:
             link = url_for('main.case_materials')
+        elif '仲夏夜聊' in title or 'Career Talk' in title:
+            link = url_for('mian.summer_chat')
         else:
             link = url_for('main.activity_detail', id=act.id)
         act.link = link
@@ -82,6 +84,10 @@ def o_hk():
 @bp.route('/o-saiwan')
 def o_saiwan():
     return render_template('o_saiwan.html')
+
+@bp.route('/summer-chat')
+def summer_chat():
+    return render_template('summer_chat.html')
 
 @bp.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
