@@ -222,15 +222,24 @@
                     </a>
                 </li>
 
-                <!-- 活动下拉菜单 -->
+                <!-- 活动（下拉菜单） -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownEvents" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-flag me-1"></i>活动
                     </a>
                     <ul class="dropdown-menu">
+                        <!-- 第一组：户外探索 -->
                         <li><a class="dropdown-item" href="{{ url_for('main.o_campus') }}"><i class="fas fa-university"></i>O-Campus</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('main.o_hk') }}"><i class="fas fa-city"></i>O-HK</a></li>
                         <li><a class="dropdown-item" href="{{ url_for('main.o_saiwan') }}"><i class="fas fa-umbrella-beach"></i>O-西环</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- 第二组：晚间活动 -->
+                        <li><a class="dropdown-item" href="{{ url_for('main.night_tour') }}"><i class="fas fa-moon"></i>夜行太平山 / 维港夜游</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('main.game_night') }}"><i class="fas fa-dice"></i>跨组娱乐夜</a></li>
+                        <li><a class="dropdown-item" href="{{ url_for('main.summer_chat') }}"><i class="fas fa-comments"></i>仲夏夜聊 2.0</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <!-- 第三组：学术相关 -->
+                        <li><a class="dropdown-item" href="{{ url_for('main.case_materials') }}"><i class="fas fa-file-alt"></i>Mini Case 小组作业</a></li>
                     </ul>
                 </li>
 
